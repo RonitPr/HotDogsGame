@@ -29,10 +29,17 @@ public class GameManager : MonoBehaviour
 
     void SetActivePlayer(int index)
     {
-        if (currentPlayer != null) currentPlayer.gameObject.SetActive(false);
+        Vector3 lastPos = Vector3.zero;
+
+        if (currentPlayer != null)
+        {
+            lastPos = currentPlayer.transform.position;
+            currentPlayer.gameObject.SetActive(false);
+        }
 
         currentPlayer = playerTypes[index];
         currentPlayer.gameObject.SetActive(true);
+        currentPlayer.transform.position = lastPos;
 
         cameraFollow.target = currentPlayer.transform;
     }
