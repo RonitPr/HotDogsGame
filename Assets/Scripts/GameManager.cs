@@ -3,8 +3,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Player[] playerTypes;
-    private int currentIndex = 0;
-    private Player currentPlayer;
+    private int _currentIndex = 0;
+    private Player _currentPlayer;
 
     public CameraFollow cameraFollow;
 
@@ -23,26 +23,26 @@ public class GameManager : MonoBehaviour
 
     void CyclePlayer()
     {
-        currentIndex = (currentIndex + 1) % playerTypes.Length;
-        SetActivePlayer(currentIndex);
+        _currentIndex = (_currentIndex + 1) % playerTypes.Length;
+        SetActivePlayer(_currentIndex);
     }
 
     void SetActivePlayer(int index)
     {
         Vector3 lastPos = Vector3.zero;
 
-        if (currentPlayer != null)
+        if (_currentPlayer != null)
         {
-            lastPos = currentPlayer.transform.position;
-            currentPlayer.gameObject.SetActive(false);
+            lastPos = _currentPlayer.transform.position;
+            _currentPlayer.gameObject.SetActive(false);
         }
 
-        currentPlayer = playerTypes[index];
-        currentPlayer.gameObject.SetActive(true);
-        currentPlayer.transform.position = lastPos;
+        _currentPlayer = playerTypes[index];
+        _currentPlayer.gameObject.SetActive(true);
+        _currentPlayer.transform.position = lastPos;
 
-        cameraFollow.target = currentPlayer.transform;
+        cameraFollow.target = _currentPlayer.transform;
     }
 
-    public Player GetCurrentPlayer() => currentPlayer;
+    public Player GetCurrentPlayer() => _currentPlayer;
 }
