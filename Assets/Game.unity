@@ -750,6 +750,10 @@ PrefabInstance:
       value: DogPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5212012765375708324, guid: d4f11bcbb57e4a243b4e72f311fee1f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212012765375708324, guid: d4f11bcbb57e4a243b4e72f311fee1f5, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
