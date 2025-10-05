@@ -3,14 +3,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Player[] playerTypes;
+    public CameraFollow cameraFollow;
+
     private int _currentIndex = 0;
     private Player _currentPlayer;
 
-    public CameraFollow cameraFollow;
-
     void Start()
     {
-        SetActivePlayer(0);
+        int randomPlayerInt = Random.Range(0, playerTypes.Length +1);
+        SetActivePlayer(randomPlayerInt);
     }
 
     void Update()
