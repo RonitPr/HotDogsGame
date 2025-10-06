@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        int randomPlayerInt = Random.Range(0, playerTypes.Length +1);
+        int randomPlayerInt = Random.Range(0, playerTypes.Length);
         SetActivePlayer(randomPlayerInt);
     }
 
