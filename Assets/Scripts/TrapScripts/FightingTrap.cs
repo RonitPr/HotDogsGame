@@ -38,7 +38,7 @@ public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
             // todo hit in front after some time interval is reached while moving
 
             // check if player ran away far enough
-            Vector3 playerPosition = GetComponent<Player>().transform.position;
+            Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
             float currentDistance = Vector3.Distance(_initialPosition, playerPosition);
             if (currentDistance >= _chaseMaxDistance) {
                 // todo go back to _initialPosition
