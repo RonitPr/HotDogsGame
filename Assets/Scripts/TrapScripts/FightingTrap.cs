@@ -3,8 +3,6 @@ using UnityEngine;
 public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
 {
     [SerializeField]
-    private Player _player;
-    [SerializeField]
     private int _chaseMaxDistance;
     [SerializeField]
     private int _stunnedTime;
@@ -40,7 +38,8 @@ public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
             // todo hit in front after some time interval is reached while moving
 
             // check if player ran away far enough
-            float currentDistance = Vector3.Distance(_initialPosition, _player.transform.position);
+            Vector3 playerPosition = GetComponent<Player>().transform.position;
+            float currentDistance = Vector3.Distance(_initialPosition, playerPosition);
             if (currentDistance >= _chaseMaxDistance) {
                 // todo go back to _initialPosition
                 _isInFightMode = false;
