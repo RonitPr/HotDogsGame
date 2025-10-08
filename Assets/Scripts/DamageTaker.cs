@@ -2,15 +2,47 @@ using UnityEngine;
 
 public class DamageTaker : MonoBehaviour
 {
-    [SerializeField]
-    public int MaxHitPoints {  get; private set; }
-    public int CurrentHitPoints { get; private set; }
+    [SerializeField] private int _maxHitPoints;
+    [SerializeField] private int _currentHitPoints;
+    [SerializeField] protected int _maxArmor;
+    [SerializeField] protected int _currentArmor;
+
+    public int MaxHitPoints
+    {
+        get => _maxHitPoints;
+        protected set => _maxHitPoints = value;
+    }
+
+    public int CurrentHitPoints
+    {
+        get => _currentHitPoints;
+        protected set => _currentHitPoints = value;
+    }
+
+    public int Armor
+    {
+        get => _maxArmor;
+        protected set => _maxArmor = value;
+    }
+
+    public int CurrentArmor
+    {
+        get => _maxArmor;
+        protected set => _currentArmor = value;
+    }
 
     // you can use the base of this function in classes that inherit from it to deal damage.
     public virtual void TakeDamage(int damagePower)
     {
-        CurrentHitPoints = Mathf.Min(CurrentHitPoints - damagePower, 0);
+        CurrentHitPoints = Mathf.Max(CurrentHitPoints - damagePower, 0);
     }
+
+    public virtual void TakePoison(int poisonPower)
+    {
+        CurrentArmor = Mathf.Max(CurrentArmor - poisonPower, 0);
+    }
+
+
 
     public void ResetHitPoints()
     {

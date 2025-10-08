@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3747607812213117519}
   - component: {fileID: 9160577573272399318}
   - component: {fileID: 361243553595980956}
+  - component: {fileID: 9098104563660060132}
   m_Layer: 0
   m_Name: SampleTrap
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5333582687263644374}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -138,6 +139,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d34bb45e1bedfb4696ff8e5795d1915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 3
+--- !u!114 &9098104563660060132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333582687263644374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791a4dab3ef3cad418a05635a2bb9bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHitPoints: 0
+  _currentHitPoints: 0
+  _maxArmor: 0
+  _currentArmor: 0
+  _power: 0
 --- !u!1 &7017261053341753688
 GameObject:
   m_ObjectHideFlags: 0

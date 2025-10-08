@@ -3,12 +3,11 @@ using UnityEditor.Playables;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public abstract class Player : MonoBehaviour
+public abstract class Player : ThingThatCanFight
 {
-    [SerializeField] private PlayerAttack _chokeAttack;
+    [SerializeField] protected PlayerAttack _ability;
     [SerializeField] private Vector2 facingDirection = Vector2.right;
 
-    public abstract Ability UseSpecialAbility();
     public float moveSpeed = 5f;
     public Rigidbody2D body;
 
@@ -32,7 +31,7 @@ public abstract class Player : MonoBehaviour
         float moveY = Input.GetAxis("Vertical");
         inputDirection = new Vector3 (moveX, moveY, 0);
 
-        // pdate facing direction only if the player is moving
+        // Update facing direction only if the player is moving
         if (inputDirection != Vector3.zero)
         {
             facingDirection = inputDirection.normalized;
@@ -43,46 +42,29 @@ public abstract class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space");
-            DealDamage(_chokeAttack.Attack(facingDirection));
+            PerformAbility(_ability.CastAbility(facingDirection));
         }
     }
 
-    private void DealDamage(RaycastHit2D[] hits)
-    {
-        for (int i = 0; i < hits.Length; i++)
-        {
-            IDamageable iDamageable = hits[i].collider.gameObject.GetComponent<IDamageable>();
-            GameObject hitObject = hits[i].collider.gameObject;
+    protected abstract void PerformAbility(RaycastHit2D[] hits);
 
-            if (iDamageable != null)
-            {
-                Debug.Log("iDamageable found");
-                if (hitObject == gameObject)
-                {
-                    Debug.Log("Ignoring self-hit.");
-                    continue;
-                }
-                iDamageable.Damage(_chokeAttack.damageAmount);
-            }
-        }
-    }
 
     private void UpdateAttackTransformPosition()
     {
-        if (_chokeAttack.attackTransform == null) return;
+        if (_ability.attackTransform == null) return;
 
-        float attackDistance = _chokeAttack.attackRange * 0.75f;
-        _chokeAttack.attackTransform.localPosition = facingDirection * attackDistance;
+        float attackDistance = _ability.attackRange * 0.75f;
+        _ability.attackTransform.localPosition = facingDirection * attackDistance;
     }
 
     public void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(_chokeAttack.attackTransform.position, _chokeAttack.attackRange);
+        Gizmos.DrawWireSphere(_ability.attackTransform.position, _ability.attackRange);
     }
 
     //Internal class that handles hitbox
     [Serializable]
-    internal class PlayerAttack
+    protected class PlayerAttack
     {
         [SerializeField] internal Transform attackTransform;
         [SerializeField] internal float attackRange = 1.5f;
@@ -91,7 +73,7 @@ public abstract class Player : MonoBehaviour
 
         private RaycastHit2D[] hits;
 
-        public RaycastHit2D[] Attack(Vector2 facingDir)
+        public RaycastHit2D[] CastAbility(Vector2 facingDir)
         {
             hits = Physics2D.CircleCastAll(
                 attackTransform.position,

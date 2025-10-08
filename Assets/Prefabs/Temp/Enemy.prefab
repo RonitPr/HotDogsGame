@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1738249602011939814}
   - component: {fileID: 1666274160939363098}
   - component: {fileID: 130066286658914485}
-  m_Layer: 0
+  - component: {fileID: 2340051452240218863}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,12 +120,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &2340051452240218863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434120695384013824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d34bb45e1bedfb4696ff8e5795d1915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3
 --- !u!1 &7439743551010769860
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8869202209901990306}
   - component: {fileID: 2830983234837142854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
