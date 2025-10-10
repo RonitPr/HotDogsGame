@@ -6,6 +6,7 @@ public class DamageTaker : MonoBehaviour
     [SerializeField] private int _currentHitPoints;
     [SerializeField] protected int _maxArmor;
     [SerializeField] protected int _currentArmor;
+    [SerializeField] int _power;
 
     public int MaxHitPoints
     {
@@ -29,6 +30,12 @@ public class DamageTaker : MonoBehaviour
     {
         get => _maxArmor;
         protected set => _currentArmor = value;
+    }
+    
+    public int Power
+    {
+        get => _power;
+        protected set => _power = value;
     }
 
     // you can use the base of this function in classes that inherit from it to deal damage.

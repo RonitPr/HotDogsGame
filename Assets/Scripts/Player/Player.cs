@@ -3,7 +3,7 @@ using UnityEditor.Playables;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public abstract class Player : ThingThatCanFight
+public abstract class Player : DamageTaker
 {
     [SerializeField] protected PlayerAttack _ability;
     [SerializeField] private Vector2 facingDirection = Vector2.right;

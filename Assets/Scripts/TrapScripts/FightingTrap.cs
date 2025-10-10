@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
+public abstract class FightingTrap : DamageTaker, IGenericTrap
 {
     [SerializeField]
     private int _chaseMaxDistance;
     [SerializeField]
     private int _stunnedTime;
 
-    protected bool isDamageable = true;
+    //protected bool isDamageable = true;
     protected bool isPoisonable = true;
     protected bool isStunable = true;
     protected bool isAttackable = true;

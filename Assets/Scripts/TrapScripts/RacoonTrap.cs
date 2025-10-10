@@ -2,11 +2,6 @@ using UnityEngine;
 
 public class RacoonTrap : FightingTrap, IPoisonable, IDamageable
 {
-    //[SerializeField] private int _armor = 1;
-
-    //private bool isDamageable = false;
-    //private bool isPoisonable = false;
-
     private void Start()
     {
         _maxArmor = 1;
