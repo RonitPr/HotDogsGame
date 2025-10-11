@@ -7,14 +7,9 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     [SerializeField]
     private int _stunnedTime;
 
-    //protected bool isDamageable = true;
-    protected bool isPoisonable = true;
-    protected bool isStunable = true;
-    protected bool isAttackable = true;
-
     private Vector3 _initialPosition;
     private bool _isStunned = false;
-    private bool _isInFightMode = false; // if not in fight mode then it is in trap mode
+    protected bool _isInFightMode = false; // if not in fight mode then it is in trap mode
 
     public void switchToFightingMode() // might need to be protected depending on who is calling this
     {
@@ -51,39 +46,42 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         }
         // Stun is over: Re-enable movement, etc.
     }
-
-    public bool IsDamageable()
+    public virtual void GetAbilityUsedOn(Ability ability)
     {
-        if (!IsPoisonable() && isAttackable)
+        if (_isInFightMode)
         {
-            return true;
+            switch (ability)
+            {
+                //case Ability.Poison:
+                //    BecomePoisoned();
+                //    break;
+                //case Ability.Cute:
+                //    BecomeStunned();
+                //    break;
+                case Ability.Choke:
+                    TakeDamage(1);
+                    break;
+                default:
+                    break;
+            }
         }
-        return false;
+        else
+        {
+            if (IsEffective(ability))
+            {
+                switchToFightingMode();
+            }
+        }
+
     }
 
-    public bool IsPoisonable()
-    {
-        if (_currentArmor > 0)
-        {
-            return true;
-        }
-        return false;
-    }
+    public abstract bool IsEffective(Ability abililty);
 
-    public bool IsStunable()
-    {
-        if (!IsPoisonable() && !isAttackable)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    //public void Stun(float duration)                      //To do: Stun
+    //public void BecomeStunned(float duration)                      //To do: Stun
     //{
-    //    if (IsStunned) return;
+    //    if (_isStunned) return;
 
-    //    IsStunned = true;
+    //    _isStunned = true;
     //    stunTimer = duration;
     //    Debug.Log($"{name} is stunned for {duration} seconds!");
 

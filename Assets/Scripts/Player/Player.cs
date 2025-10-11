@@ -1,7 +1,5 @@
 using System;
-using UnityEditor.Playables;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public abstract class Player : DamageTaker
 {
@@ -41,13 +39,26 @@ public abstract class Player : DamageTaker
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space");
             PerformAbility(_ability.CastAbility(facingDirection));
         }
     }
 
-    protected abstract void PerformAbility(RaycastHit2D[] hits);
+    protected virtual void PerformAbility(RaycastHit2D[] hits)
+    {
+        for (int i = 0; i < hits.Length; i++)
+        {
+            IGenericTrap trap = hits[i].collider.gameObject.GetComponent<IGenericTrap>();
+            GameObject hitObject = hits[i].collider.gameObject;
 
+            if (trap != null)
+            {
+                Debug.Log("IGenericTrap found");
+                trap.GetAbilityUsedOn(GetAbililty());
+            }
+        }
+    }
+
+    protected abstract Ability GetAbililty();
 
     private void UpdateAttackTransformPosition()
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DogPlayer : Player
 {
-    [SerializeField] int _poisonPower;
+    [SerializeField] int _poisonPower; //todo- use poison power (or not, maybe it only slows donw the enemy instead of stunning it)
 
     public int PoisonPower
     {
@@ -10,21 +10,8 @@ public class DogPlayer : Player
         private set => _poisonPower = value;
     }
 
-    protected override void PerformAbility(RaycastHit2D[] hits)
+    protected override Ability GetAbililty()
     {
-        for (int i = 0; i < hits.Length; i++)
-        {
-            IPoisonable iPoisonable = hits[i].collider.gameObject.GetComponent<IPoisonable>();
-            GameObject hitObject = hits[i].collider.gameObject;
-
-            if (iPoisonable != null)
-            {
-                if (hitObject == gameObject)
-                {
-                    continue;
-                }
-                iPoisonable.Poison(PoisonPower);
-            }
-        }
+        return Ability.Poison;
     }
 }

@@ -1,35 +1,7 @@
-using UnityEngine;
-
-public class RacoonTrap : FightingTrap, IPoisonable, IDamageable
+public class RacoonTrap : FightingTrap
 {
-    private void Start()
+    public override bool IsEffective(Ability ability)
     {
-        _maxArmor = 1;
-        _currentArmor = _maxArmor;
+        return ability == Ability.Poison;
     }
-
-    public void Damage(int damageAmount)
-    {
-        if (IsDamageable())
-        {
-            TakeDamage(damageAmount);
-            if (CurrentHitPoints <= 0)
-            {
-                DestroyDead();
-            }
-        }
-    }
-
-    public void Poison(int poisonPower)
-    {
-        if (IsPoisonable())
-        {
-            TakePoison(poisonPower);
-        }
-    }
-
-    //public override bool isEffective(Ability ability)
-    //{
-    //    return ability == Ability.Poison;
-    //}
 }

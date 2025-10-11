@@ -900,6 +900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RaccoonTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 7033022345689407653, guid: 00fc94326ca8b364daed0b4095c80eda, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

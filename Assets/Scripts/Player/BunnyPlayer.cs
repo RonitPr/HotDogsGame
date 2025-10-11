@@ -3,27 +3,14 @@ using UnityEngine;
 public class BunnyPlayer : Player
 {
     [SerializeField] int _stunDuration;
-    public int StunDuration
+    public int StunDuration // todo- use stun duration
     {
         get => _stunDuration;
         private set => _stunDuration = value;
     }
 
-    protected override void PerformAbility(RaycastHit2D[] hits)
+    protected override Ability GetAbililty()
     {
-        for (int i = 0; i < hits.Length; i++)
-        {
-            IStunable iStunable = hits[i].collider.gameObject.GetComponent<IStunable>();
-            GameObject hitObject = hits[i].collider.gameObject;
-
-            if (iStunable != null)
-            {
-                if (hitObject == gameObject)
-                {
-                    continue;
-                }
-                iStunable.Stun(StunDuration);
-            }
-        }
+        return Ability.Cute;
     }
 }

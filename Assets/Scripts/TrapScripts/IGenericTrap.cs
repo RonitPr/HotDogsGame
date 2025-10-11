@@ -3,9 +3,7 @@ using UnityEngine;
 public interface IGenericTrap
 {
     // returns true if the ability is effective against the trap
-    //bool isEffective(Ability ability);
-    bool IsDamageable();
-    bool IsPoisonable();
-    bool IsStunable();
+    bool IsEffective(Ability ability);
+
+    void GetAbilityUsedOn(Ability ability);
 }
-//Can move all to Interfaces Stun Poison Damageable, and emit IGenericTrap ->what do you think

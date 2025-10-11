@@ -4,8 +4,6 @@ public class DamageTaker : MonoBehaviour
 {
     [SerializeField] private int _maxHitPoints;
     [SerializeField] private int _currentHitPoints;
-    [SerializeField] protected int _maxArmor;
-    [SerializeField] protected int _currentArmor;
     [SerializeField] int _power;
 
     public int MaxHitPoints
@@ -19,18 +17,6 @@ public class DamageTaker : MonoBehaviour
         get => _currentHitPoints;
         protected set => _currentHitPoints = value;
     }
-
-    public int Armor
-    {
-        get => _maxArmor;
-        protected set => _maxArmor = value;
-    }
-
-    public int CurrentArmor
-    {
-        get => _maxArmor;
-        protected set => _currentArmor = value;
-    }
     
     public int Power
     {
@@ -42,14 +28,11 @@ public class DamageTaker : MonoBehaviour
     public virtual void TakeDamage(int damagePower)
     {
         CurrentHitPoints = Mathf.Max(CurrentHitPoints - damagePower, 0);
+        if (CurrentHitPoints == 0) {
+            DestroyDead();
+            Debug.Log("Woah it's dead!");
+        }
     }
-
-    public virtual void TakePoison(int poisonPower)
-    {
-        CurrentArmor = Mathf.Max(CurrentArmor - poisonPower, 0);
-    }
-
-
 
     public void ResetHitPoints()
     {
