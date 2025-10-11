@@ -9,6 +9,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
     private Vector3 _initialPosition;
     private bool _isStunned = false;
+    private bool _isPoisoned = false;
     protected bool _isInFightMode = false; // if not in fight mode then it is in trap mode
 
     public void switchToFightingMode() // might need to be protected depending on who is calling this
@@ -31,7 +32,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
                 Debug.Log("I'm stunned!!!!");
             }
             // todo follow player
-
+            
             // todo hit in front after some time interval is reached while moving
 
             // check if player ran away far enough
@@ -46,6 +47,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         }
         // Stun is over: Re-enable movement, etc.
     }
+
     public virtual void GetAbilityUsedOn(Ability ability)
     {
         if (_isInFightMode)
@@ -67,17 +69,17 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         }
         else
         {
+            // armor phase
             if (IsEffective(ability))
             {
                 switchToFightingMode();
             }
         }
-
     }
 
     public abstract bool IsEffective(Ability abililty);
 
-    //public void BecomeStunned(float duration)                      //To do: Stun
+    //public void BecomeStunned(float duration)                      //To do: Stunned
     //{
     //    if (_isStunned) return;
 
@@ -87,4 +89,11 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
     //    // Optionally disable AI, movement, etc.
     //}
+
+    //public void BecomePoisoned(float duration)                      //To do: Poisoned
+    //{
+
+    //}
+
+
 }
