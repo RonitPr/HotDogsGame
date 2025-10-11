@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
+public abstract class FightingTrap : DamageTaker, IGenericTrap
 {
     [SerializeField]
     private int _chaseMaxDistance;
@@ -9,10 +9,8 @@ public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
 
     private Vector3 _initialPosition;
     private bool _isStunned = false;
-    private bool _isInFightMode = false; // if not in fight mode then it is in trap mode
-
-
-    public abstract bool isEffective(Ability ability);
+    private bool _isPoisoned = false;
+    protected bool _isInFightMode = false; // if not in fight mode then it is in trap mode
 
     public void switchToFightingMode() // might need to be protected depending on who is calling this
     {
@@ -34,7 +32,7 @@ public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
                 Debug.Log("I'm stunned!!!!");
             }
             // todo follow player
-
+            
             // todo hit in front after some time interval is reached while moving
 
             // check if player ran away far enough
@@ -47,6 +45,55 @@ public abstract class FightingTrap : ThingThatCanFight, IGenericTrap
                 return;
             }
         }
-
+        // Stun is over: Re-enable movement, etc.
     }
+
+    public virtual void GetAbilityUsedOn(Ability ability)
+    {
+        if (_isInFightMode)
+        {
+            switch (ability)
+            {
+                //case Ability.Poison:
+                //    BecomePoisoned();
+                //    break;
+                //case Ability.Cute:
+                //    BecomeStunned();
+                //    break;
+                case Ability.Choke:
+                    TakeDamage(1);
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            // armor phase
+            if (IsEffective(ability))
+            {
+                switchToFightingMode();
+            }
+        }
+    }
+
+    public abstract bool IsEffective(Ability abililty);
+
+    //public void BecomeStunned(float duration)                      //To do: Stunned
+    //{
+    //    if (_isStunned) return;
+
+    //    _isStunned = true;
+    //    stunTimer = duration;
+    //    Debug.Log($"{name} is stunned for {duration} seconds!");
+
+    //    // Optionally disable AI, movement, etc.
+    //}
+
+    //public void BecomePoisoned(float duration)                      //To do: Poisoned
+    //{
+
+    //}
+
+
 }

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class OfficerTrap : MonoBehaviour, IGenericTrap
+public class OfficerTrap : SimpleTrap
 {
-    public bool isEffective(Ability ability)
+    public override bool IsEffective(Ability ability)
     {
         return ability == Ability.Cute;
     }
