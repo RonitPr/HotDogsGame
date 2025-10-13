@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Player : DamageTaker
 {
-    [SerializeField] protected PlayerAttack _ability;
+    [SerializeField] protected AttackCast _ability;
     [SerializeField] private Vector2 facingDirection = Vector2.right;
 
     public float moveSpeed = 5f;
@@ -11,11 +11,15 @@ public abstract class Player : DamageTaker
 
     protected Vector3 inputDirection;
 
+    void Start()
+    {
+        CurrentHitPoints = MaxHitPoints;   
+    }
     void Update()
     {
         HandleMovement();
         HandleAttack();
-        UpdateAttackTransformPosition();
+        _ability.UpdateAttackTransformPosition(facingDirection);
     }
 
     private void FixedUpdate()
@@ -39,7 +43,7 @@ public abstract class Player : DamageTaker
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PerformAbility(_ability.CastAbility(facingDirection));
+            PerformAbility(_ability.Cast(facingDirection));
         }
     }
 
@@ -60,42 +64,9 @@ public abstract class Player : DamageTaker
 
     protected abstract Ability GetAbililty();
 
-    private void UpdateAttackTransformPosition()
-    {
-        if (_ability.attackTransform == null) return;
-
-        float attackDistance = _ability.attackRange * 0.75f;
-        _ability.attackTransform.localPosition = facingDirection * attackDistance;
-    }
-
     public void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(_ability.attackTransform.position, _ability.attackRange);
-    }
-
-    //Internal class that handles hitbox
-    [Serializable]
-    protected class PlayerAttack
-    {
-        [SerializeField] internal Transform attackTransform;
-        [SerializeField] internal float attackRange = 1.5f;
-        [SerializeField] internal LayerMask attackableLayer;
-        [SerializeField] internal int damageAmount = 1;
-
-        private RaycastHit2D[] hits;
-
-        public RaycastHit2D[] CastAbility(Vector2 facingDir)
-        {
-            hits = Physics2D.CircleCastAll(
-                attackTransform.position,
-                attackRange,
-                facingDir, //(changed) Vector2.right,
-                0f,
-                attackableLayer
-            );
-
-            return hits;
-        }
     }
 }
 
