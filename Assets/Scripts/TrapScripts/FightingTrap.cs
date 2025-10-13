@@ -9,7 +9,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
     private Vector3 _initialPosition;
     private bool _isStunned = false;
-    private bool _isPoisoned = false;
+    //private bool _isPoisoned = false;
     protected bool _isInFightMode = false; // if not in fight mode then it is in trap mode
 
     public void switchToFightingMode() // might need to be protected depending on who is calling this
