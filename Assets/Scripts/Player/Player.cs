@@ -13,7 +13,7 @@ public abstract class Player : DamageTaker
 
     void Start()
     {
-        CurrentHitPoints = MaxHitPoints;   
+        GlobalHealth.CurrentHitPoints = MaxHitPoints;
     }
     void Update()
     {
@@ -63,6 +63,16 @@ public abstract class Player : DamageTaker
     }
 
     protected abstract Ability GetAbililty();
+
+    public override void TakeDamage(int damagePower)
+    {
+        GlobalHealth.CurrentHitPoints = Mathf.Max(GlobalHealth.CurrentHitPoints - damagePower, 0);
+        Debug.Log($"player {name} got attacked. hp:" + GlobalHealth.CurrentHitPoints);
+        if (GlobalHealth.CurrentHitPoints == 0)
+        {
+            DestroyDead();
+        }
+    }
 
     public void OnDrawGizmosSelected()
     {

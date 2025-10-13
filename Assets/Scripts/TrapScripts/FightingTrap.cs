@@ -36,7 +36,6 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         _isStunned = false;
         _isPoisoned = false;
         _initialPosition = transform.position;
-        //_attackTimeCounter = Time.time + _attackTimeInterval;
     }
 
     // Update is called once per frame
