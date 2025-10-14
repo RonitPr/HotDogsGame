@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -22,6 +23,9 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     private bool _isStunned;
     private bool _isPoisoned;
     protected bool _isInFightMode; // if not in fight mode then it is in trap mode
+
+    public event Action OnEnemyDamaged;
+    public event Action OnFightModeEntered;
 
     public void switchToFightingMode() // might need to be protected depending on who is calling this
     {
@@ -117,6 +121,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
             if (IsEffective(ability))
             {
                 switchToFightingMode();
+                OnFightModeEntered?.Invoke();
             }
         }
     }
@@ -181,6 +186,12 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
                 player.TakeDamage(1);
             }
         }
+    }
+
+    public override void TakeDamage(int damagePower)
+    {
+        base.TakeDamage(damagePower);
+        OnEnemyDamaged?.Invoke();
     }
 
     public void OnDrawGizmosSelected()

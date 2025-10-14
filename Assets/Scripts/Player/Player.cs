@@ -3,6 +3,9 @@ using UnityEngine;
 
 public abstract class Player : DamageTaker
 {
+    public static event Action OnPlayerDamaged;
+    //public static event Action OnPlayerDeath;
+
     [SerializeField] protected AttackCast _ability;
     [SerializeField] private Vector2 facingDirection = Vector2.right;
 
@@ -11,10 +14,11 @@ public abstract class Player : DamageTaker
 
     protected Vector3 inputDirection;
 
-    void Start()
+    private void Awake()
     {
         GlobalHealth.CurrentHitPoints = MaxHitPoints;
     }
+
     void Update()
     {
         HandleMovement();
@@ -67,10 +71,11 @@ public abstract class Player : DamageTaker
     public override void TakeDamage(int damagePower)
     {
         GlobalHealth.CurrentHitPoints = Mathf.Max(GlobalHealth.CurrentHitPoints - damagePower, 0);
-        Debug.Log($"player {name} got attacked. hp:" + GlobalHealth.CurrentHitPoints);
+        OnPlayerDamaged?.Invoke();
         if (GlobalHealth.CurrentHitPoints == 0)
         {
             DestroyDead();
+            //OnPlayerDeath?.Invoke();
         }
     }
 
