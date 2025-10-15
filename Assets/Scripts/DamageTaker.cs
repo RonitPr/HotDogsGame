@@ -26,6 +26,10 @@ public class DamageTaker : MonoBehaviour
         get => _power;
         protected set => _power = value;
     }
+    private void Start()
+    {
+        _currentHitPoints = _maxHitPoints;
+    }
 
     // you can use the base of this function in classes that inherit from it to deal damage.
     public virtual void TakeDamage(int damagePower)
@@ -42,7 +46,7 @@ public class DamageTaker : MonoBehaviour
         CurrentHitPoints = MaxHitPoints;
     }
 
-    public void DestroyDead()
+    public virtual void DestroyDead()
     {
         OnDefeated?.Invoke();
         // Optional: play animation or disable sprite
