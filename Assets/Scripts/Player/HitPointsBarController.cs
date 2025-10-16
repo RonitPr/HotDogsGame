@@ -12,11 +12,13 @@ public class HitPointsBarController : MonoBehaviour
     private void OnEnable()
     {
         Player.OnPlayerDamaged += DrawHearts;
+        GlobalHealth.OnPickedHealth += DrawHearts;
     }
 
     private void OnDisable()
     {
         Player.OnPlayerDamaged -= DrawHearts;
+        GlobalHealth.OnPickedHealth -= DrawHearts;
     }
 
     private void Start()
