@@ -5,12 +5,6 @@ using System.Collections.Generic;
 
 public class TrapSpawner : MonoBehaviour
 {
-    //[SerializeField] private List<GameObject> trapPrefabs; // assign 2 trap prefabs
-    //[SerializeField, Range(0f, 1f)] private float spawnChance = 0.6f;
-    //[SerializeField] private List<Transform> trapSpawnPoints; // assign in Inspector
-    
-    //public List<GameObject> trapPrefabs; // assign 2 trap prefabs
-    
     [Header("Trap Prefabs")]
     public TrapController[] trapPrefabs; // Assign your trap prefabs here (Slime, Spikes, etc.)
 
@@ -37,7 +31,7 @@ public class TrapSpawner : MonoBehaviour
 
             if (trapController != null)
             {
-                trapController.SetDirection(point.direction);
+                trapController.SetDirection(point.direction, point.spriteDirection);
             }
         }
     }

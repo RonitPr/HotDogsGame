@@ -3,6 +3,7 @@ using UnityEngine;
 public class TrapSpawnPoint : MonoBehaviour
 {
     public TrapDirection direction = TrapDirection.Horizontal;
+    public SpriteDirection spriteDirection = SpriteDirection.Up;
 
     private void OnDrawGizmos()
     {

@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: e1110b3ea9f7ee5479436218224f1e75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4846157737469034980
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_0
+  - first:
+      213: -1528340250023111042
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_1
+  - first:
+      213: -4910701319556554491
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_2
+  - first:
+      213: 4224509597394061938
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_3
+  - first:
+      213: -289582747797871440
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_4
+  - first:
+      213: 4806227856306332019
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_5
+  - first:
+      213: 1339780472777741811
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_6
+  - first:
+      213: -3829910813040563593
+    second: Black_HatchBack_CLEAN_8D_000-sheet_X4_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_0
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1190
+        width: 318
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1eb5acb63dfebcb0800000000000000
+      internalID: -4846157737469034980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_1
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1146
+        width: 270
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76d07dd3ae3acae0800000000000000
+      internalID: -1528340250023111042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_2
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1138
+        width: 170
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5012ac9fa2fa9dbb0800000000000000
+      internalID: -4910701319556554491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 746
+        width: 270
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ac6eea81970aa30800000000000000
+      internalID: 4224509597394061938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_4
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 790
+        width: 318
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b42d6076023bfbf0800000000000000
+      internalID: -289582747797871440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_5
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 750
+        width: 270
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371e9b455c623b240800000000000000
+      internalID: 4806227856306332019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_6
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 354
+        width: 170
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f51ce4dd3bd79210800000000000000
+      internalID: 1339780472777741811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_HatchBack_CLEAN_8D_000-sheet_X4_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 349
+        width: 270
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a2a43486c69dac0800000000000000
+      internalID: -3829910813040563593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_0: -4846157737469034980
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_1: -1528340250023111042
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_2: -4910701319556554491
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_3: 4224509597394061938
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_4: -289582747797871440
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_5: 4806227856306332019
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_6: 1339780472777741811
+      Black_HatchBack_CLEAN_8D_000-sheet_X4_7: -3829910813040563593
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

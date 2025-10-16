@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public enum TrapDirection { Horizontal, Vertical }
+public enum SpriteDirection { Up, Down, Left, Right }
 
 public class TrapController : MonoBehaviour
 {
@@ -8,19 +9,23 @@ public class TrapController : MonoBehaviour
     public GameObject visualChild;
     public BoxCollider2D blockingCollider;
     public TrapDirection direction;
+    public SpriteDirection spriteDirection;
+    public SpriteRenderer blockSprite;
 
-    //private DamageTaker fightingTrap;
-    //private SimpleTrap simpleTrap;
+    [Header("Sprites")]
+    public Sprite horizontalSprite;
+    public Sprite verticalSprite;
+
     private IGenericTrap trap;
+    private Vector3 spriteInitialLocalPosition;
 
     private void Awake()
     {
+        spriteInitialLocalPosition = blockingCollider.transform.localPosition;
         AdjustColliderDirection();
-        //if (visualChild != null)
-        //    fightingTrap = visualChild.GetComponent<DamageTaker>();
-        //if (visualChild != null)
-        //    simpleTrap = visualChild.GetComponent<SimpleTrap>();
+        
         if (visualChild == null) return;
+
         if (visualChild.TryGetComponent<IGenericTrap>(out var t))
         {
             trap = t;
@@ -28,20 +33,8 @@ public class TrapController : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // Register callback so TrapEnemy notifies when defeated
-        //if (fightingTrap != null)
-        //    fightingTrap.OnDefeated += HandleDefeated;
-        //if (simpleTrap != null)
-        //    simpleTrap.OnDefeated += HandleDefeated;
-    }
-
     private void HandleDefeated()
     {
-        // Optional: play particle or sound
-        Debug.Log($"{name} defeated — path unblocked!");
-
         // Remove the collider (unblocks path)
         if (blockingCollider != null)
             blockingCollider.enabled = false;
@@ -49,46 +42,57 @@ public class TrapController : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
-    public void SetDirection(TrapDirection dir)
+    public void SetDirection(TrapDirection dir, SpriteDirection sdir)
     {
         direction = dir;
+        spriteDirection = sdir;
         AdjustColliderDirection();
-        //transform.rotation = direction == TrapDirection.Horizontal ? Quaternion.identity : Quaternion.Euler(0, 0, 90); \\Set sprite direction
+        AdjustSpriteDirection();
     }
 
     private void AdjustColliderDirection()
     {
         if (blockingCollider == null) return;
 
-        //switch (direction)
-        //{
-        //    case TrapDirection.Horizontal:
-        //        blockingCollider.size = new Vector2(5f, 1f);
-        //        blockingCollider.offset = Vector2.zero;
-        //        transform.rotation = Quaternion.identity;
-        //        Debug.Log("I'm Horizontal");
-        //        break;
-
-        //    case TrapDirection.Vertical:
-        //        blockingCollider.size = new Vector2(1f, 5f);
-        //        blockingCollider.offset = Vector2.zero;
-        //        transform.rotation = Quaternion.identity; // keep upright
-        //        Debug.Log("I'm Vertical");
-        //        break;
-        //}
-
-        if (blockingCollider == null)
-            return;
-
         if (direction == TrapDirection.Horizontal)
         {
             blockingCollider.size = new Vector2(5f, 1f);
             blockingCollider.offset = new Vector2(0, 0);
+            
+            if (blockSprite != null && horizontalSprite != null)
+                blockSprite.sprite = horizontalSprite;
         }
         else
         {
             blockingCollider.size = new Vector2(1f, 5f);
             blockingCollider.offset = new Vector2(0, 0);
+            
+            if (blockSprite != null && verticalSprite != null)
+                blockSprite.sprite = verticalSprite;
         }
+    }
+    private void AdjustSpriteDirection()
+    {
+        if (blockSprite == null || blockingCollider == null) return;
+
+        Vector3 offset = Vector3.zero;
+
+        switch (spriteDirection)
+        {
+            case SpriteDirection.Up:
+                offset = new Vector3(0f, 1f, 0f);
+                break;
+            case SpriteDirection.Down:
+                offset = new Vector3(0f, -1f, 0f);
+                break;
+            case SpriteDirection.Left:
+                offset = new Vector3(-1f, 0f, 0f);
+                break;
+            case SpriteDirection.Right:
+                offset = new Vector3(1f, 0f, 0f);
+                break;
+        }
+
+        blockingCollider.transform.localPosition = spriteInitialLocalPosition + offset;
     }
 }
