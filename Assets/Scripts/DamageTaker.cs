@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DamageTaker : MonoBehaviour
@@ -5,6 +6,8 @@ public class DamageTaker : MonoBehaviour
     [SerializeField] private int _maxHitPoints;
     [SerializeField] private int _currentHitPoints;
     [SerializeField] int _power;
+    
+    public event Action OnDefeated;
 
     public int MaxHitPoints
     {
@@ -23,6 +26,10 @@ public class DamageTaker : MonoBehaviour
         get => _power;
         protected set => _power = value;
     }
+    private void Start()
+    {
+        _currentHitPoints = _maxHitPoints;
+    }
 
     // you can use the base of this function in classes that inherit from it to deal damage.
     public virtual void TakeDamage(int damagePower)
@@ -39,9 +46,10 @@ public class DamageTaker : MonoBehaviour
         CurrentHitPoints = MaxHitPoints;
     }
 
-    public void DestroyDead()
+    public virtual void DestroyDead()
     {
-        // gets the gameObject is is on in the inspector and destroys it
-        Destroy(gameObject);
+        OnDefeated?.Invoke();
+        // Optional: play animation or disable sprite
+        Destroy(gameObject, 0.3f);
     }
 }

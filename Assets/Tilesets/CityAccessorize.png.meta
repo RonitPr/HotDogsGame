@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 752ca1f1c89b3e548b578145c7ff87bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6451440102465659403
+    second: CityAccessorize_0
+  - first:
+      213: -9090449284634139289
+    second: CityAccessorize_1
+  - first:
+      213: 8857928003894834167
+    second: CityAccessorize_2
+  - first:
+      213: 5741058988218877939
+    second: CityAccessorize_3
+  - first:
+      213: 2621593645671860348
+    second: CityAccessorize_4
+  - first:
+      213: -1485020245284034337
+    second: CityAccessorize_5
+  - first:
+      213: 3003183925591679446
+    second: CityAccessorize_6
+  - first:
+      213: 3451780437333092474
+    second: CityAccessorize_7
+  - first:
+      213: -8952914833250838665
+    second: CityAccessorize_8
+  - first:
+      213: 1597956335843435659
+    second: CityAccessorize_9
+  - first:
+      213: -3500374813776088489
+    second: CityAccessorize_10
+  - first:
+      213: 7802644599857049063
+    second: CityAccessorize_11
+  - first:
+      213: -8678369420321394483
+    second: CityAccessorize_12
+  - first:
+      213: -8138962858990336096
+    second: CityAccessorize_13
+  - first:
+      213: 6143849763746689333
+    second: CityAccessorize_14
+  - first:
+      213: -6492852249611908207
+    second: CityAccessorize_15
+  - first:
+      213: 2678379800902939381
+    second: CityAccessorize_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CityAccessorize_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 348
+        width: 114
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd13d27861e776a0800000000000000
+      internalID: -6451440102465659403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 348
+        width: 114
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765ada4f98c38d180800000000000000
+      internalID: -9090449284634139289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_2
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 348
+        width: 114
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3f226969eadea70800000000000000
+      internalID: 8857928003894834167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_3
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 154
+        width: 53
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7895b7bb65caf40800000000000000
+      internalID: 5741058988218877939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 154
+        width: 94
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7841bbe785c16420800000000000000
+      internalID: 2621593645671860348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_5
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 248
+        width: 94
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8e49374f5246be0800000000000000
+      internalID: -1485020245284034337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_6
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 237
+        width: 90
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d12e086ed37da920800000000000000
+      internalID: 3003183925591679446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 154
+        width: 99
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78a1e9f40037ef20800000000000000
+      internalID: 3451780437333092474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_8
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 168
+        width: 93
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77712cbc46bd0c380800000000000000
+      internalID: -8952914833250838665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 154
+        width: 89
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84688432d41d2610800000000000000
+      internalID: 1597956335843435659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_10
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 154
+        width: 88
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752f62417ab2c6fc0800000000000000
+      internalID: -3500374813776088489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_11
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 156
+        width: 90
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed69136cef884c60800000000000000
+      internalID: 7802644599857049063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_12
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 156
+        width: 62
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc071200efc309780800000000000000
+      internalID: -8678369420321394483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 154
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a788cdd6689c0f80800000000000000
+      internalID: -8138962858990336096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_14
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 156
+        width: 82
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5313d710fc6534550800000000000000
+      internalID: 6143849763746689333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_15
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 209
+        width: 79
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b49c29741c4e5a0800000000000000
+      internalID: -6492852249611908207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CityAccessorize_16
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 173
+        width: 11
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2b66efc348b2520800000000000000
+      internalID: 2678379800902939381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CityAccessorize_0: -6451440102465659403
+      CityAccessorize_1: -9090449284634139289
+      CityAccessorize_10: -3500374813776088489
+      CityAccessorize_11: 7802644599857049063
+      CityAccessorize_12: -8678369420321394483
+      CityAccessorize_13: -8138962858990336096
+      CityAccessorize_14: 6143849763746689333
+      CityAccessorize_15: -6492852249611908207
+      CityAccessorize_16: 2678379800902939381
+      CityAccessorize_2: 8857928003894834167
+      CityAccessorize_3: 5741058988218877939
+      CityAccessorize_4: 2621593645671860348
+      CityAccessorize_5: -1485020245284034337
+      CityAccessorize_6: 3003183925591679446
+      CityAccessorize_7: 3451780437333092474
+      CityAccessorize_8: -8952914833250838665
+      CityAccessorize_9: 1597956335843435659
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

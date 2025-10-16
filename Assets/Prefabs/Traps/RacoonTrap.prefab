@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1961436915
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
@@ -149,8 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHitPoints: 3
   _currentHitPoints: 3
-  _maxArmor: 1
-  _currentArmor: 1
   _power: 1
   _chaseMaxDistance: 5
   _stunnedTime: 2

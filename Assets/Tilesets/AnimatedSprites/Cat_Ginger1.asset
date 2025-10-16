@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Cat_Ginger1
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 3820053878755764637, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: -7280418131748078836, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: -6489382710446054914, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: 8020309252262147994, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: -2233867190720072964, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: -6574882360087552930, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: 2030733401401914820, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  - {fileID: -4139104999652020064, guid: af0d6a21e8874fd4393153eb173a61a9, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 2
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 1
+  m_TileAnimationFlags: 0
