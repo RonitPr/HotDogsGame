@@ -716,5 +716,5 @@ MonoBehaviour:
   direction: 0
   spriteDirection: 0
   blockSprite: {fileID: 8275360641366731657}
-  horizontalSprite: {fileID: 5539391370059822139, guid: 5539ee66abf0b014fb53127fb2aa541b, type: 3}
-  verticalSprite: {fileID: -2946351092906506336, guid: 2e929473ed5b7144b96bb0575c177ebb, type: 3}
+  horizontalSprite: {fileID: 290209684060840245, guid: da8a1c0b5ef8e334186d2080c528d5cd, type: 3}
+  verticalSprite: {fileID: -8901742331186592874, guid: 6da98132e87b9d84a8f7309adf5cf6a9, type: 3}
