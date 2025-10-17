@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 2png_3
+  m_Name: Casino_edited_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 8234083246687407934, guid: b9e78b77f304cb74a887be6f9f75fa35, type: 3}
+  m_Sprite: {fileID: 1633484674, guid: cff50d426b3ff9248b0d9eeee49b0ba4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
