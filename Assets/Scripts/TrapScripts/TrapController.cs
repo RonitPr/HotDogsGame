@@ -37,7 +37,6 @@ public class TrapController : MonoBehaviour
 
     private void HandleDefeated()
     {
-        // Remove the collider (unblocks path)
         if (blockingCollider != null)
             blockingCollider.enabled = false;
 

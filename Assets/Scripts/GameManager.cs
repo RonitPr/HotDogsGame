@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         int randomPlayerInt = Random.Range(0, playerTypes.Length);
         SetActivePlayer(randomPlayerInt);
 
-        // --- SAFE SINGLETON PATTERN ---
+        // SAFE SINGLETON PATTERN
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);  // Destroy duplicate managers
@@ -29,12 +29,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
         UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
         DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //}
-        //else
-        //    Destroy(gameObject);
     }
 
     void Update()

@@ -6,14 +6,14 @@ using System.Collections.Generic;
 public class TrapSpawner : MonoBehaviour
 {
     [Header("Trap Prefabs")]
-    public TrapController[] trapPrefabs; // Assign your trap prefabs here (Slime, Spikes, etc.)
+    public TrapController[] trapPrefabs;
 
     [Header("Spawn Settings")]
     [Range(0f, 1f)]
-    public float spawnChance = 0.6f; // 60% chance a trap will spawn
+    public float spawnChance = 0.8f; // 60% => 80% chance a trap will spawn
 
     [Header("Spawn Points")]
-    [SerializeField] private TrapSpawnPoint[] spawnPoints; // drag them manually in Inspector
+    [SerializeField] private TrapSpawnPoint[] spawnPoints;
 
     void Start()
     {
