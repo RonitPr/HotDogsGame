@@ -30,6 +30,8 @@ public class TrapController : MonoBehaviour
         {
             trap = t;
             trap.OnDefeated += HandleDefeated;
+
+            GameManager.Instance.RegisterTrap(trap);
         }
     }
 

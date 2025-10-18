@@ -2,16 +2,39 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     public Player[] playerTypes;
     public CameraFollow cameraFollow;
 
     private int _currentIndex = 0;
     public Player CurrentPlayer;
 
+    private int trapsDefeated = 0;
+    private int totalTrapsSpawned = 0;
+    public int TrapsDefeated => trapsDefeated;
+    public int TotalTrapsSpawned => totalTrapsSpawned;
+
     void Awake()
     {
         int randomPlayerInt = Random.Range(0, playerTypes.Length);
         SetActivePlayer(randomPlayerInt);
+
+        // --- SAFE SINGLETON PATTERN ---
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);  // Destroy duplicate managers
+            return;
+        }
+
+        Instance = this;
+        UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
+        DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //}
+        //else
+        //    Destroy(gameObject);
     }
 
     void Update()
@@ -46,4 +69,17 @@ public class GameManager : MonoBehaviour
     }
 
     public Player GetCurrentPlayer() => CurrentPlayer;
+
+    public void RegisterTrap(IGenericTrap trap)
+    {
+        totalTrapsSpawned++;
+        trap.OnDefeated += () => AddTrapDefeat();
+    }
+
+    private void AddTrapDefeat()
+    {
+        trapsDefeated++;
+        Debug.Log($"Traps Defeated: {trapsDefeated}");
+        UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
+    }
 }
