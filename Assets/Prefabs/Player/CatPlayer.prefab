@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 622236044071851126}
   - component: {fileID: 3813783888247319250}
   - component: {fileID: 27147218976841650}
+  - component: {fileID: 6243781156616065666}
   m_Layer: 7
   m_Name: CatPlayer
   m_TagString: Player
@@ -200,7 +201,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.16980767, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -254,7 +255,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &3813783888247319250
 MonoBehaviour:
@@ -281,6 +282,7 @@ MonoBehaviour:
   facingDirection: {x: 1, y: 0}
   moveSpeed: 5
   body: {fileID: 27147218976841650}
+  Anim: {fileID: 6243781156616065666}
 --- !u!50 &27147218976841650
 Rigidbody2D:
   serializedVersion: 5
@@ -308,3 +310,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &6243781156616065666
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264240262028485836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb825a8245f1b574f9e1d0d4c21958e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

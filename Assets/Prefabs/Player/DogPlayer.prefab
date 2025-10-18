@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 1074861885059099318}
   - component: {fileID: 9028503122895473229}
   - component: {fileID: 5292835826051100219}
+  - component: {fileID: 5262526313085244394}
   m_Layer: 7
   m_Name: DogPlayer
   m_TagString: Player
@@ -200,11 +201,11 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8494850719358125344, guid: 4256efc1bd0f0c74a941811407d35d10, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.875, y: 1.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -249,7 +250,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.875, y: 1.125}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.875, y: 1.125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -308,4 +309,27 @@ MonoBehaviour:
   facingDirection: {x: 1, y: 0}
   moveSpeed: 5
   body: {fileID: 9028503122895473229}
+  Anim: {fileID: 5262526313085244394}
   _poisonPower: 1
+--- !u!95 &5262526313085244394
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212012765375708324}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db84f344ec6f6164ab1afe1b51054cc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 923b5f534e20c5c4cb803629b0acc648
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8802608191759490517
+    second: 16x16 Run Cycle-Sheet 1_0
+  - first:
+      213: -5438699234539805578
+    second: 16x16 Run Cycle-Sheet 1_1
+  - first:
+      213: 4147389303678490072
+    second: 16x16 Run Cycle-Sheet 1_2
+  - first:
+      213: -5320273622694570209
+    second: 16x16 Run Cycle-Sheet 1_3
+  - first:
+      213: 3131773100912917348
+    second: 16x16 Run Cycle-Sheet 1_4
+  - first:
+      213: -6510260224517373044
+    second: 16x16 Run Cycle-Sheet 1_5
+  - first:
+      213: 4616038275145134844
+    second: 16x16 Run Cycle-Sheet 1_6
+  - first:
+      213: -4337363987641132111
+    second: 16x16 Run Cycle-Sheet 1_7
+  - first:
+      213: -4407626587470775573
+    second: 16x16 Run Cycle-Sheet 1_8
+  - first:
+      213: 8036747562605412426
+    second: 16x16 Run Cycle-Sheet 1_9
+  - first:
+      213: -2769935211994532430
+    second: 16x16 Run Cycle-Sheet 1_10
+  - first:
+      213: 373341416035853879
+    second: 16x16 Run Cycle-Sheet 1_11
+  - first:
+      213: -2540451584788805295
+    second: 16x16 Run Cycle-Sheet 1_12
+  - first:
+      213: 6370088820048780359
+    second: 16x16 Run Cycle-Sheet 1_13
+  - first:
+      213: -1025864939131287257
+    second: 16x16 Run Cycle-Sheet 1_14
+  - first:
+      213: -3383778364459981529
+    second: 16x16 Run Cycle-Sheet 1_15
+  - first:
+      213: -5926759866643712290
+    second: 16x16 Run Cycle-Sheet 1_16
+  - first:
+      213: 4039673832376209705
+    second: 16x16 Run Cycle-Sheet 1_17
+  - first:
+      213: 3002488520223845844
+    second: 16x16 Run Cycle-Sheet 1_18
+  - first:
+      213: 6681082873490303236
+    second: 16x16 Run Cycle-Sheet 1_19
+  - first:
+      213: -1535928132527547198
+    second: 16x16 Run Cycle-Sheet 1_20
+  - first:
+      213: 8852647563070158556
+    second: 16x16 Run Cycle-Sheet 1_21
+  - first:
+      213: 3676464367677563758
+    second: 16x16 Run Cycle-Sheet 1_22
+  - first:
+      213: 5620883954008611454
+    second: 16x16 Run Cycle-Sheet 1_23
+  - first:
+      213: -8156259001191037529
+    second: 16x16 Run Cycle-Sheet 1_24
+  - first:
+      213: 2356541531710881181
+    second: 16x16 Run Cycle-Sheet 1_25
+  - first:
+      213: -6173566189422617769
+    second: 16x16 Run Cycle-Sheet 1_26
+  - first:
+      213: -2210939589391471084
+    second: 16x16 Run Cycle-Sheet 1_27
+  - first:
+      213: 8022536253483591539
+    second: 16x16 Run Cycle-Sheet 1_28
+  - first:
+      213: -5659043408414420610
+    second: 16x16 Run Cycle-Sheet 1_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd94ce1385292a70800000000000000
+      internalID: 8802608191759490517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 81
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674e0159cdbd584b0800000000000000
+      internalID: -5438699234539805578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 80
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5d20f099c7e8930800000000000000
+      internalID: 4147389303678490072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 79
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f17d86304579a26b0800000000000000
+      internalID: -5320273622694570209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 81
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bb90dda0b467b20800000000000000
+      internalID: 3131773100912917348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 80
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83894291d8e6a5a0800000000000000
+      internalID: -6510260224517373044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 59
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2f1abba567f0040800000000000000
+      internalID: 4616038275145134844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 61
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb141ffe669ec3c0800000000000000
+      internalID: -4337363987641132111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 60
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beabc37a8f6f4d2c0800000000000000
+      internalID: -4407626587470775573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 59
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a400592e353488f60800000000000000
+      internalID: 8036747562605412426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 61
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b53836b9963f89d0800000000000000
+      internalID: -2769935211994532430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 61
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73622c23a006e2500800000000000000
+      internalID: 373341416035853879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 39
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159c5975eb08ebcd0800000000000000
+      internalID: -2540451584788805295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 41
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cd1ba180a176850800000000000000
+      internalID: 6370088820048780359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 40
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7294d8be54563c1f0800000000000000
+      internalID: -1025864939131287257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 39
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725e5bb61876a01d0800000000000000
+      internalID: -3383778364459981529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 41
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6f8a77d4befbda0800000000000000
+      internalID: -5926759866643712290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 40
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921993b82fdcf0830800000000000000
+      internalID: 4039673832376209705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 19
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd612ab66bfaa920800000000000000
+      internalID: 3002488520223845844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 22
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409e55db979f7bc50800000000000000
+      internalID: 6681082873490303236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 21
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc9a2c40894faae0800000000000000
+      internalID: -1535928132527547198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd636862e0ceada70800000000000000
+      internalID: 8852647563070158556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 21
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e636dc81ddc650330800000000000000
+      internalID: 3676464367677563758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 21
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a506aec24610e40800000000000000
+      internalID: 5620883954008611454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a50de1f6a52fce80800000000000000
+      internalID: -8156259001191037529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9df410a90e14b020800000000000000
+      internalID: 2356541531710881181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b5a1a7246135aa0800000000000000
+      internalID: -6173566189422617769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e2972582a2151e0800000000000000
+      internalID: -2210939589391471084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3772592a736c55f60800000000000000
+      internalID: 8022536253483591539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7151f0c00a0771b0800000000000000
+      internalID: -5659043408414420610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      16x16 Run Cycle-Sheet 1_0: 8802608191759490517
+      16x16 Run Cycle-Sheet 1_1: -5438699234539805578
+      16x16 Run Cycle-Sheet 1_10: -2769935211994532430
+      16x16 Run Cycle-Sheet 1_11: 373341416035853879
+      16x16 Run Cycle-Sheet 1_12: -2540451584788805295
+      16x16 Run Cycle-Sheet 1_13: 6370088820048780359
+      16x16 Run Cycle-Sheet 1_14: -1025864939131287257
+      16x16 Run Cycle-Sheet 1_15: -3383778364459981529
+      16x16 Run Cycle-Sheet 1_16: -5926759866643712290
+      16x16 Run Cycle-Sheet 1_17: 4039673832376209705
+      16x16 Run Cycle-Sheet 1_18: 3002488520223845844
+      16x16 Run Cycle-Sheet 1_19: 6681082873490303236
+      16x16 Run Cycle-Sheet 1_2: 4147389303678490072
+      16x16 Run Cycle-Sheet 1_20: -1535928132527547198
+      16x16 Run Cycle-Sheet 1_21: 8852647563070158556
+      16x16 Run Cycle-Sheet 1_22: 3676464367677563758
+      16x16 Run Cycle-Sheet 1_23: 5620883954008611454
+      16x16 Run Cycle-Sheet 1_24: -8156259001191037529
+      16x16 Run Cycle-Sheet 1_25: 2356541531710881181
+      16x16 Run Cycle-Sheet 1_26: -6173566189422617769
+      16x16 Run Cycle-Sheet 1_27: -2210939589391471084
+      16x16 Run Cycle-Sheet 1_28: 8022536253483591539
+      16x16 Run Cycle-Sheet 1_29: -5659043408414420610
+      16x16 Run Cycle-Sheet 1_3: -5320273622694570209
+      16x16 Run Cycle-Sheet 1_4: 3131773100912917348
+      16x16 Run Cycle-Sheet 1_5: -6510260224517373044
+      16x16 Run Cycle-Sheet 1_6: 4616038275145134844
+      16x16 Run Cycle-Sheet 1_7: -4337363987641132111
+      16x16 Run Cycle-Sheet 1_8: -4407626587470775573
+      16x16 Run Cycle-Sheet 1_9: 8036747562605412426
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
