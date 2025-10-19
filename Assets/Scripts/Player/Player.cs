@@ -88,6 +88,7 @@ public abstract class Player : DamageTaker
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PerformAbility(_ability.Cast(facingDirection));
+            Anim.SetTrigger("ActiveAttack");
         }
     }
 

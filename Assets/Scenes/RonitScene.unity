@@ -435,6 +435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 5264240262028485836, guid: 718ba3e59b8869a4b9d76acd70e1d186, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6276538425865024034, guid: 718ba3e59b8869a4b9d76acd70e1d186, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
