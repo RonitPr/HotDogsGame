@@ -21,16 +21,23 @@ public class WinItem : PickupBase
         Time.timeScale = 0f;
     }
 
+    public void GoToWinScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Win");
+    }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game");
     }
 
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Intro");
     }
 }
 

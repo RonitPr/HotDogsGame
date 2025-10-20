@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
-        DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
+        //DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
     }
 
     void Update()

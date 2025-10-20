@@ -1,5 +1,8 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
 
 public abstract class Player : DamageTaker
 {
@@ -13,6 +16,8 @@ public abstract class Player : DamageTaker
     public Rigidbody2D body;
 
     protected Vector3 inputDirection;
+
+    private float delayAfterDeath = 3f;
 
     private void Awake()
     {
@@ -75,6 +80,7 @@ public abstract class Player : DamageTaker
         if (GlobalHealth.CurrentHitPoints == 0)
         {
             DestroyDead();
+            StartCoroutine(GoToLooseScene());
             //OnPlayerDeath?.Invoke();
         }
     }
@@ -82,6 +88,13 @@ public abstract class Player : DamageTaker
     public void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(_ability.attackTransform.position, _ability.attackRange);
+    }
+
+    private IEnumerator GoToLooseScene()
+    {
+        yield return new WaitForSeconds(delayAfterDeath);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Loose");
     }
 }
 
