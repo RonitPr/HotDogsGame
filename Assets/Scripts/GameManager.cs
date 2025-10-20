@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private float delayAfterDeath = 2f;
+
     public static GameManager Instance;
     public Player[] playerTypes;
     public CameraFollow cameraFollow;
@@ -75,5 +79,27 @@ public class GameManager : MonoBehaviour
         trapsDefeated++;
         Debug.Log($"Traps Defeated: {trapsDefeated}");
         UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
+    }
+
+    private void OnEnable()
+    {
+        Player.OnPlayerDeath += HandlePlayerDeath;
+    }
+
+    //private void OnDisable()      // I'm not sure if needed
+    //{
+    //    Player.OnPlayerDeath -= HandlePlayerDeath;
+    //}
+
+    private void HandlePlayerDeath()
+    {
+        StartCoroutine(GoToLooseScene());
+    }
+
+    private IEnumerator GoToLooseScene()
+    {
+        yield return new WaitForSeconds(delayAfterDeath);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Loose");
     }
 }

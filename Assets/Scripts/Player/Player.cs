@@ -7,7 +7,7 @@ using System.Collections;
 public abstract class Player : DamageTaker
 {
     public static event Action OnPlayerDamaged;
-    //public static event Action OnPlayerDeath;
+    public static event Action OnPlayerDeath;
 
     [SerializeField] protected AttackCast _ability;
     [SerializeField] private Vector2 facingDirection = Vector2.right;
@@ -80,8 +80,8 @@ public abstract class Player : DamageTaker
         if (GlobalHealth.CurrentHitPoints == 0)
         {
             DestroyDead();
-            StartCoroutine(GoToLooseScene());
-            //OnPlayerDeath?.Invoke();
+            //StartCoroutine(GoToLooseScene());
+            OnPlayerDeath?.Invoke();
         }
     }
 
@@ -90,12 +90,12 @@ public abstract class Player : DamageTaker
         Gizmos.DrawWireSphere(_ability.attackTransform.position, _ability.attackRange);
     }
 
-    private IEnumerator GoToLooseScene()
-    {
-        yield return new WaitForSeconds(delayAfterDeath);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Loose");
-    }
+    //private IEnumerator GoToLooseScene()
+    //{
+    //    yield return new WaitForSeconds(delayAfterDeath);
+    //    Time.timeScale = 1f;
+    //    SceneManager.LoadScene("Loose");
+    //}
 }
 
 
