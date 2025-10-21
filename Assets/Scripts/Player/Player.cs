@@ -17,7 +17,7 @@ public abstract class Player : DamageTaker
 
     protected Vector3 inputDirection;
 
-    private float delayAfterDeath = 3f;
+    //private float delayAfterDeath = 3f;
 
     private void Awake()
     {

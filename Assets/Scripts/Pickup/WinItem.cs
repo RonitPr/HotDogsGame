@@ -14,11 +14,12 @@ public class WinItem : PickupBase
 
     private void TriggerWin()
     {
-        if (winCanvas != null)
-        {
-            winCanvas.SetActive(true);
-        }
-        Time.timeScale = 0f;
+        //if (winCanvas != null)
+        //{
+        //    winCanvas.SetActive(true);
+        //}
+        //Time.timeScale = 0f;
+        GoToWinScene();
     }
 
     public void GoToWinScene()
