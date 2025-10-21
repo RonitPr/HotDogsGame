@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attackCat
+  m_Name: RacGetInBin
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 8276958336962197266, guid: f9bb63777f8e9c64bb84441cd72035f4, type: 3}
+      value: {fileID: -3408887493780060126, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
+    - time: 0.2
+      value: {fileID: -9193663154088916978, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
+    - time: 0.25
+      value: {fileID: -5091802897030452725, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
     - time: 0.3
-      value: {fileID: 2041953414615358247, guid: f9bb63777f8e9c64bb84441cd72035f4, type: 3}
+      value: {fileID: -9047622981771605387, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 8276958336962197266, guid: f9bb63777f8e9c64bb84441cd72035f4, type: 3}
-    - {fileID: 2041953414615358247, guid: f9bb63777f8e9c64bb84441cd72035f4, type: 3}
+    - {fileID: -3408887493780060126, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
+    - {fileID: -9193663154088916978, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
+    - {fileID: -5091802897030452725, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
+    - {fileID: -9047622981771605387, guid: ec993d2ff144a9243af909bcfb9d4024, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

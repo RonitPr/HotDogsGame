@@ -10,9 +10,14 @@ public abstract class SimpleTrap : MonoBehaviour, IGenericTrap
         if (IsEffective(ability)){
             OnDefeated?.Invoke();
             Debug.Log("Correct ability used! Disarming trap!");
-            Destroy(gameObject);
+            DestroyTrap();
         }
     }
 
     public abstract bool IsEffective(Ability ability);
+
+    public virtual void DestroyTrap()
+    {
+        Destroy(gameObject);
+    }
 }

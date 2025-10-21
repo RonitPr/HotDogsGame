@@ -25,11 +25,6 @@ public abstract class Player : DamageTaker
         GlobalHealth.CurrentHitPoints = MaxHitPoints;
     }
 
-    private void Start()
-    {
-        //Anim = GetComponent<Animator>();
-    }
-
     void Update()
     {
         HandleMovement();
