@@ -27,8 +27,6 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     public Animator Anim;
     private bool _facingLeft = true; // the assets sprites are facing left
     private Vector3 _targetPosition;
-    [SerializeField]
-    private AnimationClip _enterFighingModeAnimation;
 
     public event Action OnEnemyDamaged;
     public event Action OnFightModeEntered;
@@ -106,6 +104,10 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
             {
                 _targetPosition = _initialPosition;
                 Animate(_targetPosition);
+                if (isFacingANewDirection())
+                {
+                    Flip();
+                }
                 GoBackToInitialPosition();
             }
             else
@@ -224,6 +226,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
             if (player != null)
             {
+                Anim.SetTrigger("ActiveAttack");
                 Debug.Log("Player attacked!");
                 player.TakeDamage(1);
             }
