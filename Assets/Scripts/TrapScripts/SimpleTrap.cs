@@ -5,6 +5,15 @@ public abstract class SimpleTrap : MonoBehaviour, IGenericTrap
 {
     public event Action OnDefeated;
 
+    private Animator _anim;
+    [SerializeField]
+    private AnimationClip effectiveAnimation; // animation used when the correct ability was used on this trap
+    
+    void Start()
+    {
+        _anim = GetComponent<Animator>();
+    }
+
     public virtual void GetAbilityUsedOn(Ability ability)
     {
         if (IsEffective(ability)){
@@ -18,6 +27,8 @@ public abstract class SimpleTrap : MonoBehaviour, IGenericTrap
 
     public virtual void DestroyTrap()
     {
-        Destroy(gameObject);
+        Debug.Log(effectiveAnimation.name);
+        _anim.Play(effectiveAnimation.name);
+        Destroy(gameObject, effectiveAnimation.length);
     }
 }

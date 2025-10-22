@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class OfficerTrap : SimpleTrap
+public class BullSimpleTrap : SimpleTrap
 {
     public override bool IsEffective(Ability ability)
     {
-        return ability == Ability.Cute;
+        return ability == Ability.Choke;
     }
 }
