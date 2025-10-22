@@ -49,7 +49,7 @@ public abstract class Player : DamageTaker
 
         if((moveX == 0 && moveY == 0) && (inputDirection.x != 0 || inputDirection.y != 0))
         {
-            lastMoveDirection = inputDirection;
+            lastMoveDirection = inputDirection; // for getting the correct standing direction while idle animation plays
         }
 
         inputDirection = new Vector2 (moveX, moveY);
