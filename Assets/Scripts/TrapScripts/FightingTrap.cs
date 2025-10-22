@@ -24,7 +24,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     private bool _isPoisoned;
     protected bool _isInFightMode; // if not in fight mode then it is in trap mode
 
-    public Animator Anim;
+    private Animator _anim;
     private bool _facingLeft = true; // the assets sprites are facing left
     private Vector3 _targetPosition;
 
@@ -34,13 +34,14 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     {
         _isInFightMode = true;
         _attackTimeCounter = _attackTimeInterval;
-        Anim.SetTrigger("FightingMode");
-        Anim.SetBool("IsInPlace", false);
+        _anim.SetTrigger("FightingMode");
+        _anim.SetBool("IsInPlace", false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _anim = GetComponent<Animator>();
         _isInFightMode = false;
         _isStunned = false;
         _isPoisoned = false;
@@ -95,7 +96,6 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
             float playerDistanceFromInitialPosition = Vector3.Distance(_initialPosition, playerPosition);
             if (playerDistanceFromInitialPosition >= _chaseMaxDistance) {
                 _isInFightMode = false;
-                Debug.Log("You ran away...");
             }
         }
         else
@@ -112,7 +112,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
             }
             else
             {
-                Anim.SetBool("IsInPlace", true);
+                _anim.SetBool("IsInPlace", true);
             }
         }
     }
@@ -122,8 +122,8 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         Vector3 enemyPos2D = new Vector2(transform.position.x, transform.position.y);
         Vector3 targetPos2D = new Vector2(targetPosition.x, targetPosition.y);
         Vector2 movementDirection = targetPos2D - enemyPos2D;
-        Anim.SetFloat("MoveX", movementDirection.x);
-        Anim.SetFloat("MoveY", movementDirection.y);
+        _anim.SetFloat("MoveX", movementDirection.x);
+        _anim.SetFloat("MoveY", movementDirection.y);
     }
 
     void Flip()
@@ -200,7 +200,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         {
             _isPoisoned = false; // timer switches to countdown for stun instead
         }
-        Debug.Log($"{name} is stunned for {_timeLeftForAffect} seconds!");
+        //Debug.Log($"{name} is stunned for {_timeLeftForAffect} seconds!");
     }
 
     public void BecomePoisoned()
@@ -214,7 +214,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         {
             _isStunned = false; // timer switches to countdown for poison instead
         }
-        Debug.Log($"{name} is poisoned for {_timeLeftForAffect} seconds!");
+        //Debug.Log($"{name} is poisoned for {_timeLeftForAffect} seconds!");
     }
 
     protected virtual void UseAttack(RaycastHit2D[] hits)
@@ -226,8 +226,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
             if (player != null)
             {
-                Anim.SetTrigger("ActiveAttack");
-                Debug.Log("Player attacked!");
+                _anim.SetTrigger("ActiveAttack");
                 player.TakeDamage(1);
             }
         }

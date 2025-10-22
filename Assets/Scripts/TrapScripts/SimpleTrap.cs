@@ -27,7 +27,6 @@ public abstract class SimpleTrap : MonoBehaviour, IGenericTrap
 
     public virtual void DestroyTrap()
     {
-        Debug.Log(effectiveAnimation.name);
         _anim.Play(effectiveAnimation.name);
         Destroy(gameObject, effectiveAnimation.length);
     }

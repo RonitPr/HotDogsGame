@@ -16,12 +16,12 @@ public abstract class Player : DamageTaker
     public float moveSpeed = 5f;
     public Rigidbody2D body;
 
-    protected Vector2 inputDirection;
+    protected Vector3 _inputDirection;
 
     //animation
     public Animator Anim;
     private bool _facingLeft = true; // the assets sprites are facing left
-    protected Vector2 lastMoveDirection;
+    protected Vector3 lastMoveDirection;
 
 
     private void Awake()
@@ -37,10 +37,11 @@ public abstract class Player : DamageTaker
         HandleMovement();
         HandleAttack();
         Animate();
-        if (inputDirection.x < 0 && !_facingLeft || inputDirection.x > 0 && _facingLeft)
-        {
-            Flip();
-        }
+        //todo- fix the flip
+        //if (_inputDirection.x < 0 && !_facingLeft || _inputDirection.x > 0 && _facingLeft)
+        //{
+        //    Flip();
+        //}
         _ability.UpdateAttackTransformPosition(_facingDirection);
     }
 
@@ -54,15 +55,15 @@ public abstract class Player : DamageTaker
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        if((moveX == 0 && moveY == 0) && (inputDirection.x != 0 || inputDirection.y != 0))
+        if((moveX == 0 && moveY == 0) && (_inputDirection.x != 0 || _inputDirection.y != 0))
         {
-            lastMoveDirection = inputDirection; // for getting the correct standing direction while idle animation plays
+            lastMoveDirection = _inputDirection; // for getting the correct standing direction while idle animation plays
         }
 
-        inputDirection = new Vector2 (moveX, moveY);
+        _inputDirection = new Vector3 (moveX, moveY);
 
         // Update facing direction only if the player is moving
-        if (inputDirection != Vector2.zero)
+        if (_inputDirection != Vector3.zero)
         {
             _facingDirection = _inputDirection.normalized;
         }
@@ -70,9 +71,9 @@ public abstract class Player : DamageTaker
 
     void Animate()
     {
-        Anim.SetFloat("MoveX", inputDirection.x);
-        Anim.SetFloat("MoveY", inputDirection.y);
-        Anim.SetFloat("MoveMagnitude", inputDirection.magnitude);
+        Anim.SetFloat("MoveX", _inputDirection.x);
+        Anim.SetFloat("MoveY", _inputDirection.y);
+        Anim.SetFloat("MoveMagnitude", _inputDirection.magnitude);
         Anim.SetFloat("LastMoveX", lastMoveDirection.x);
         Anim.SetFloat("LastMoveY", lastMoveDirection.y);
     }
@@ -103,7 +104,6 @@ public abstract class Player : DamageTaker
 
             if (trap != null)
             {
-                Debug.Log("IGenericTrap found");
                 trap.GetAbilityUsedOn(GetAbililty());
             }
         }

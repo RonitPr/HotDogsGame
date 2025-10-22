@@ -37,6 +37,7 @@ public class TrapController : MonoBehaviour
 
     private void HandleDefeated()
     {
+        Debug.Log("Should handle defeated!");
         if (blockingCollider != null)
             blockingCollider.enabled = false;
 

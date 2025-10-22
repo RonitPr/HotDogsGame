@@ -7,7 +7,7 @@ public class HealthPickup : PickupBase
     
     protected override void HandlePickupEffect()
     {
-        Debug.Log($"HealthPickup used — healing for {healAmount} HP!");
+        //Debug.Log($"HealthPickup used — healing for {healAmount} HP!");
         GlobalHealth.AddHealthPoints(healAmount);
     }
 }
