@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489e796dc69954a4297927d871ee6679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualChild: {fileID: 3120002878111265508}
+  visualChild: {fileID: 4708373193557729702, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
   blockingCollider: {fileID: 4422112570410508766}
   direction: 0
   spriteDirection: 0

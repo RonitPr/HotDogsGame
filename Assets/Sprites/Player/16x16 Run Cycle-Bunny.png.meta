@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 49b9ed9a754e4d9469ee70eea8b982da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5957697861271881380
+    second: 16x16 Run Cycle-Bunny_0
+  - first:
+      213: -1680570140673359823
+    second: 16x16 Run Cycle-Bunny_1
+  - first:
+      213: -7866021381389034882
+    second: 16x16 Run Cycle-Bunny_2
+  - first:
+      213: 416727059857513625
+    second: 16x16 Run Cycle-Bunny_3
+  - first:
+      213: -8125530223148621676
+    second: 16x16 Run Cycle-Bunny_4
+  - first:
+      213: 2254422365430547798
+    second: 16x16 Run Cycle-Bunny_5
+  - first:
+      213: -2897739952815412531
+    second: 16x16 Run Cycle-Bunny_6
+  - first:
+      213: -4474426628386413662
+    second: 16x16 Run Cycle-Bunny_7
+  - first:
+      213: 105641529675948455
+    second: 16x16 Run Cycle-Bunny_8
+  - first:
+      213: -3263688905025036105
+    second: 16x16 Run Cycle-Bunny_9
+  - first:
+      213: 688432902065818919
+    second: 16x16 Run Cycle-Bunny_10
+  - first:
+      213: -6880479611885541401
+    second: 16x16 Run Cycle-Bunny_11
+  - first:
+      213: 504071444341800845
+    second: 16x16 Run Cycle-Bunny_12
+  - first:
+      213: 3418469046664377764
+    second: 16x16 Run Cycle-Bunny_13
+  - first:
+      213: -5378529632733761309
+    second: 16x16 Run Cycle-Bunny_14
+  - first:
+      213: 4632990210034375119
+    second: 16x16 Run Cycle-Bunny_15
+  - first:
+      213: -1001803992077877062
+    second: 16x16 Run Cycle-Bunny_16
+  - first:
+      213: -211303410280044414
+    second: 16x16 Run Cycle-Bunny_17
+  - first:
+      213: -1898130676461160258
+    second: 16x16 Run Cycle-Bunny_18
+  - first:
+      213: -1390793291151910118
+    second: 16x16 Run Cycle-Bunny_19
+  - first:
+      213: -1082241683291084132
+    second: 16x16 Run Cycle-Bunny_20
+  - first:
+      213: 4997290411194965297
+    second: 16x16 Run Cycle-Bunny_21
+  - first:
+      213: -8425426491433570712
+    second: 16x16 Run Cycle-Bunny_22
+  - first:
+      213: -7200756216068843757
+    second: 16x16 Run Cycle-Bunny_23
+  - first:
+      213: 1491422718073899053
+    second: 16x16 Run Cycle-Bunny_24
+  - first:
+      213: -3207362154305914233
+    second: 16x16 Run Cycle-Bunny_25
+  - first:
+      213: 1607703451025896095
+    second: 16x16 Run Cycle-Bunny_26
+  - first:
+      213: -3807577078014809698
+    second: 16x16 Run Cycle-Bunny_27
+  - first:
+      213: -6098608557104343847
+    second: 16x16 Run Cycle-Bunny_28
+  - first:
+      213: -8874152346561666071
+    second: 16x16 Run Cycle-Bunny_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59f8c34c51025da0800000000000000
+      internalID: -5957697861271881380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 81
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13049017c5a6da8e0800000000000000
+      internalID: -1680570140673359823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 80
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7adda6ca3746d290800000000000000
+      internalID: -7866021381389034882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 79
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c99139d0388c500800000000000000
+      internalID: 416727059857513625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 81
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490a68d10515c3f80800000000000000
+      internalID: -8125530223148621676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 80
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550f296231594f10800000000000000
+      internalID: 2254422365430547798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 59
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcaeaf4add829c7d0800000000000000
+      internalID: -2897739952815412531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_7
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 61
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3aa7120b4a7e1c0800000000000000
+      internalID: -4474426628386413662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 41
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a12dd95960577100800000000000000
+      internalID: 105641529675948455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 60
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0699e8b3c05b2d0800000000000000
+      internalID: -3263688905025036105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_10
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 59
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d0353b31ecd8900800000000000000
+      internalID: 688432902065818919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_11
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 61
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7ae315f30a380a0800000000000000
+      internalID: -6880479611885541401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 61
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f3965de42def600800000000000000
+      internalID: 504071444341800845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 39
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a539127c77d07f20800000000000000
+      internalID: 3418469046664377764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 40
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0fdf2bbcf9b55b0800000000000000
+      internalID: -5378529632733761309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 39
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc916f4ac00bb4040800000000000000
+      internalID: 4632990210034375119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_16
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 41
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab041a5b390e812f0800000000000000
+      internalID: -1001803992077877062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 40
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288ed6afaac411df0800000000000000
+      internalID: -211303410280044414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8b24cd43c78a5e0800000000000000
+      internalID: -1898130676461160258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 22
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bd4e4ded8e2bce0800000000000000
+      internalID: -1390793291151910118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 21
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a605a4cea1bf0f0800000000000000
+      internalID: -1082241683291084132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_21
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 19
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dddb6f621f95540800000000000000
+      internalID: 4997290411194965297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 21
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86eafe0fe3fd21b80800000000000000
+      internalID: -8425426491433570712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_23
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 21
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317d70b6f56c11c90800000000000000
+      internalID: -7200756216068843757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d280eb86f0992b410800000000000000
+      internalID: 1491422718073899053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_25
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a709e2d192d73d0800000000000000
+      internalID: -3207362154305914233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_26
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92719e45c5bf4610800000000000000
+      internalID: 1607703451025896095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_27
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99e10a22d4c82bc0800000000000000
+      internalID: -3807577078014809698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d453a144d36d5ba0800000000000000
+      internalID: -6098608557104343847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16x16 Run Cycle-Bunny_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e32e74457da8d480800000000000000
+      internalID: -8874152346561666071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      16x16 Run Cycle-Bunny_0: -5957697861271881380
+      16x16 Run Cycle-Bunny_1: -1680570140673359823
+      16x16 Run Cycle-Bunny_10: 688432902065818919
+      16x16 Run Cycle-Bunny_11: -6880479611885541401
+      16x16 Run Cycle-Bunny_12: 504071444341800845
+      16x16 Run Cycle-Bunny_13: 3418469046664377764
+      16x16 Run Cycle-Bunny_14: -5378529632733761309
+      16x16 Run Cycle-Bunny_15: 4632990210034375119
+      16x16 Run Cycle-Bunny_16: -1001803992077877062
+      16x16 Run Cycle-Bunny_17: -211303410280044414
+      16x16 Run Cycle-Bunny_18: -1898130676461160258
+      16x16 Run Cycle-Bunny_19: -1390793291151910118
+      16x16 Run Cycle-Bunny_2: -7866021381389034882
+      16x16 Run Cycle-Bunny_20: -1082241683291084132
+      16x16 Run Cycle-Bunny_21: 4997290411194965297
+      16x16 Run Cycle-Bunny_22: -8425426491433570712
+      16x16 Run Cycle-Bunny_23: -7200756216068843757
+      16x16 Run Cycle-Bunny_24: 1491422718073899053
+      16x16 Run Cycle-Bunny_25: -3207362154305914233
+      16x16 Run Cycle-Bunny_26: 1607703451025896095
+      16x16 Run Cycle-Bunny_27: -3807577078014809698
+      16x16 Run Cycle-Bunny_28: -6098608557104343847
+      16x16 Run Cycle-Bunny_29: -8874152346561666071
+      16x16 Run Cycle-Bunny_3: 416727059857513625
+      16x16 Run Cycle-Bunny_4: -8125530223148621676
+      16x16 Run Cycle-Bunny_5: 2254422365430547798
+      16x16 Run Cycle-Bunny_6: -2897739952815412531
+      16x16 Run Cycle-Bunny_7: -4474426628386413662
+      16x16 Run Cycle-Bunny_8: 105641529675948455
+      16x16 Run Cycle-Bunny_9: -3263688905025036105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

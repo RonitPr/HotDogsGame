@@ -24,12 +24,18 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     private bool _isPoisoned;
     protected bool _isInFightMode; // if not in fight mode then it is in trap mode
 
+    public Animator Anim;
+    private bool _facingLeft = true; // the assets sprites are facing left
+    private Vector3 _targetPosition;
+
     public event Action OnEnemyDamaged;
     public event Action OnFightModeEntered;
     public void switchToFightingMode() // might need to be protected depending on who is calling this
     {
         _isInFightMode = true;
         _attackTimeCounter = _attackTimeInterval;
+        Anim.SetTrigger("FightingMode");
+        Anim.SetBool("IsInPlace", false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,10 +71,17 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
                 _attackTimeCounter -= Time.deltaTime;
             }
 
-                Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-            
+            Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+            _targetPosition = playerPosition;
             ChasePlayer(playerPosition);
-            if(_attackTimeCounter <= 0.0f)
+
+            Animate(_targetPosition);
+            if (isFacingANewDirection())
+            {
+                Flip();
+            }
+
+            if (_attackTimeCounter <= 0.0f)
             {
                 _attack.UpdateAttackTransformPosition(_facingDirection);
                 if (!_isStunned && !_isPoisoned)
@@ -89,9 +102,41 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
         {
             if (Vector3.Distance(_initialPosition, transform.position) > 0.05f) 
             {
+                _targetPosition = _initialPosition;
+                Animate(_targetPosition);
+                if (isFacingANewDirection())
+                {
+                    Flip();
+                }
                 GoBackToInitialPosition();
             }
+            else
+            {
+                Anim.SetBool("IsInPlace", true);
+            }
         }
+    }
+
+    void Animate(Vector3 targetPosition)
+    {
+        Vector3 enemyPos2D = new Vector2(transform.position.x, transform.position.y);
+        Vector3 targetPos2D = new Vector2(targetPosition.x, targetPosition.y);
+        Vector2 movementDirection = targetPos2D - enemyPos2D;
+        Anim.SetFloat("MoveX", movementDirection.x);
+        Anim.SetFloat("MoveY", movementDirection.y);
+    }
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1; // flips the sprite horizontally
+        transform.localScale = scale;
+        _facingLeft = !_facingLeft;
+    }
+
+    private bool isFacingANewDirection()
+    {
+        return (_targetPosition - transform.position).x < 0 && !_facingLeft || (_targetPosition - transform.position).x > 0 && _facingLeft;
     }
 
     public virtual void GetAbilityUsedOn(Ability ability)
@@ -181,6 +226,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
 
             if (player != null)
             {
+                Anim.SetTrigger("ActiveAttack");
                 Debug.Log("Player attacked!");
                 player.TakeDamage(1);
             }

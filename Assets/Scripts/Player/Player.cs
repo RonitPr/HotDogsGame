@@ -16,9 +16,13 @@ public abstract class Player : DamageTaker
     public float moveSpeed = 5f;
     public Rigidbody2D body;
 
-    protected Vector3 _inputDirection;
+    protected Vector2 inputDirection;
 
-    //private float delayAfterDeath = 3f;
+    //animation
+    public Animator Anim;
+    private bool _facingLeft = true; // the assets sprites are facing left
+    protected Vector2 lastMoveDirection;
+
 
     private void Awake()
     {
@@ -32,6 +36,11 @@ public abstract class Player : DamageTaker
 
         HandleMovement();
         HandleAttack();
+        Animate();
+        if (inputDirection.x < 0 && !_facingLeft || inputDirection.x > 0 && _facingLeft)
+        {
+            Flip();
+        }
         _ability.UpdateAttackTransformPosition(_facingDirection);
     }
 
@@ -44,19 +53,44 @@ public abstract class Player : DamageTaker
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        _inputDirection = new Vector3 (moveX, moveY, 0);
+
+        if((moveX == 0 && moveY == 0) && (inputDirection.x != 0 || inputDirection.y != 0))
+        {
+            lastMoveDirection = inputDirection; // for getting the correct standing direction while idle animation plays
+        }
+
+        inputDirection = new Vector2 (moveX, moveY);
 
         // Update facing direction only if the player is moving
-        if (_inputDirection != Vector3.zero)
+        if (inputDirection != Vector2.zero)
         {
             _facingDirection = _inputDirection.normalized;
         }
     }
+
+    void Animate()
+    {
+        Anim.SetFloat("MoveX", inputDirection.x);
+        Anim.SetFloat("MoveY", inputDirection.y);
+        Anim.SetFloat("MoveMagnitude", inputDirection.magnitude);
+        Anim.SetFloat("LastMoveX", lastMoveDirection.x);
+        Anim.SetFloat("LastMoveY", lastMoveDirection.y);
+    }
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1; // flips the sprite horizontally
+        transform.localScale = scale;
+        _facingLeft = !_facingLeft;
+    }
+
     protected void HandleAttack()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PerformAbility(_ability.Cast(_facingDirection));
+            Anim.SetTrigger("ActiveAttack");
         }
     }
 
@@ -84,7 +118,6 @@ public abstract class Player : DamageTaker
         if (GlobalHealth.CurrentHitPoints == 0)
         {
             DestroyDead();
-            //StartCoroutine(GoToLooseScene());
             OnPlayerDeath?.Invoke();
         }
     }
@@ -93,13 +126,6 @@ public abstract class Player : DamageTaker
     {
         Gizmos.DrawWireSphere(_ability.attackTransform.position, _ability.attackRange);
     }
-
-    //private IEnumerator GoToLooseScene()
-    //{
-    //    yield return new WaitForSeconds(delayAfterDeath);
-    //    Time.timeScale = 1f;
-    //    SceneManager.LoadScene("Loose");
-    //}
 }
 
 
