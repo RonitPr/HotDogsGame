@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         int randomPlayerInt = UnityEngine.Random.Range(0, playerTypes.Length);      //Added UnityEngine 
         SetActivePlayer(randomPlayerInt);
+        _currentIndex = randomPlayerInt;
 
         // SAFE SINGLETON PATTERN
         if (Instance != null && Instance != this)
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         UIManager.Instance?.UpdateTrapCounter(_trapsDefeated, _totalTrapsSpawned);
+        Debug.Log($"defeated {_trapsDefeated}, out of{_totalTrapsSpawned}");
+
         //DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
     }
 

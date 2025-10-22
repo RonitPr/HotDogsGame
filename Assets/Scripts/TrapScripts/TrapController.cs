@@ -33,10 +33,10 @@ public class TrapController : MonoBehaviour
             GameManager.Instance?.RegisterTrap(trap);
         }
     }
-    private void OnDisable()
-    {
-        trap.OnDefeated -= HandleDefeated;
-    }
+    //private void OnDisable()  // It causes null errors
+    //{
+    //    trap.OnDefeated -= HandleDefeated;
+    //}
 
     private void HandleDefeated()
     {

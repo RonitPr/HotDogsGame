@@ -5,7 +5,7 @@ using System.Collections;
 public class HandleWinItemBarricade : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private float animationEndDelay = 6f;
+    [SerializeField] private float animationEndDelay = 3f;
 
     private void OnEnable()
     {
@@ -14,7 +14,7 @@ public class HandleWinItemBarricade : MonoBehaviour
     }
     private void DestroyBarricade()
     {
-        WaitAndPrint();
+        StartCoroutine(WaitAndPrint());
     }
     IEnumerator WaitAndPrint()
     {
