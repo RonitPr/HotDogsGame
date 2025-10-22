@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489e796dc69954a4297927d871ee6679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualChild: {fileID: 4708373193557729702, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
+  visualChild: {fileID: 8133001857214052857}
   blockingCollider: {fileID: 4422112570410508766}
   direction: 0
   spriteDirection: 0
@@ -444,5 +444,10 @@ PrefabInstance:
 --- !u!4 &4043345314468949172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 690567263224755435, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
+  m_PrefabInstance: {fileID: 3569589103147030623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8133001857214052857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4708373193557729702, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
   m_PrefabInstance: {fileID: 3569589103147030623}
   m_PrefabAsset: {fileID: 0}
