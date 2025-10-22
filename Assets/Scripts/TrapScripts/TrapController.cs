@@ -30,12 +30,13 @@ public class TrapController : MonoBehaviour
         {
             trap = t;
             trap.OnDefeated += HandleDefeated;
+
+            GameManager.Instance.RegisterTrap(trap);
         }
     }
 
     private void HandleDefeated()
     {
-        // Remove the collider (unblocks path)
         if (blockingCollider != null)
             blockingCollider.enabled = false;
 
