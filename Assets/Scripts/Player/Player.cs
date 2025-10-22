@@ -10,12 +10,13 @@ public abstract class Player : DamageTaker
     public static event Action OnPlayerDeath;
 
     [SerializeField] protected AttackCast _ability;
-    [SerializeField] private Vector2 facingDirection = Vector2.right;
+    [SerializeField] private Vector2 _facingDirection = Vector2.right;
+    [SerializeField] private CameraFollow _cameraFollow;
 
     public float moveSpeed = 5f;
     public Rigidbody2D body;
 
-    protected Vector3 inputDirection;
+    protected Vector3 _inputDirection;
 
     //private float delayAfterDeath = 3f;
 
@@ -26,33 +27,36 @@ public abstract class Player : DamageTaker
 
     void Update()
     {
+        if (_cameraFollow != null && _cameraFollow.IsHovering)
+            return;
+
         HandleMovement();
         HandleAttack();
-        _ability.UpdateAttackTransformPosition(facingDirection);
+        _ability.UpdateAttackTransformPosition(_facingDirection);
     }
 
     private void FixedUpdate()
     {
-        body.linearVelocity = inputDirection * moveSpeed;
+        body.linearVelocity = _inputDirection * moveSpeed;
     }
 
     protected void HandleMovement()
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-        inputDirection = new Vector3 (moveX, moveY, 0);
+        _inputDirection = new Vector3 (moveX, moveY, 0);
 
         // Update facing direction only if the player is moving
-        if (inputDirection != Vector3.zero)
+        if (_inputDirection != Vector3.zero)
         {
-            facingDirection = inputDirection.normalized;
+            _facingDirection = _inputDirection.normalized;
         }
     }
     protected void HandleAttack()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PerformAbility(_ability.Cast(facingDirection));
+            PerformAbility(_ability.Cast(_facingDirection));
         }
     }
 

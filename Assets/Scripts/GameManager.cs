@@ -1,26 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private float delayAfterDeath = 2f;
-
+    public static event Action OnAllTrapsDefeated;
+    
     public static GameManager Instance;
     public Player[] playerTypes;
     public CameraFollow cameraFollow;
-
-    private int _currentIndex = 0;
     public Player CurrentPlayer;
+    public int TrapsDefeated => _trapsDefeated;
+    public int TotalTrapsSpawned => _totalTrapsSpawned;
+    public static bool AreAllTrapsDefeated => _areAllTrapsDefeated;
 
-    private int trapsDefeated = 0;
-    private int totalTrapsSpawned = 0;
-    public int TrapsDefeated => trapsDefeated;
-    public int TotalTrapsSpawned => totalTrapsSpawned;
+
+    [SerializeField] private float _delayAfterDeath = 2f;
+    
+    private static bool _areAllTrapsDefeated;
+    private int _currentIndex = 0;
+    private int _trapsDefeated = 0;
+    private int _totalTrapsSpawned = 0;
+
 
     void Awake()
     {
-        int randomPlayerInt = Random.Range(0, playerTypes.Length);
+        int randomPlayerInt = UnityEngine.Random.Range(0, playerTypes.Length);      //Added UnityEngine 
         SetActivePlayer(randomPlayerInt);
 
         // SAFE SINGLETON PATTERN
@@ -31,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
+        UIManager.Instance?.UpdateTrapCounter(_trapsDefeated, _totalTrapsSpawned);
         //DontDestroyOnLoad(gameObject); // Keep it alive between scene loads
     }
 
@@ -70,20 +76,23 @@ public class GameManager : MonoBehaviour
 
     public void RegisterTrap(IGenericTrap trap)
     {
-        totalTrapsSpawned++;
+        _totalTrapsSpawned++;
         trap.OnDefeated += () => AddTrapDefeat();
     }
 
     private void AddTrapDefeat()
     {
-        trapsDefeated++;
-        Debug.Log($"Traps Defeated: {trapsDefeated}");
-        UIManager.Instance?.UpdateTrapCounter(trapsDefeated, totalTrapsSpawned);
+        _trapsDefeated++;
+        Debug.Log($"Traps Defeated: {_trapsDefeated}");
+        UIManager.Instance?.UpdateTrapCounter(_trapsDefeated, _totalTrapsSpawned);
+
+        HandleAllTrapsDefeated();
     }
 
     private void OnEnable()
     {
         Player.OnPlayerDeath += HandlePlayerDeath;
+        WinItem.OnWinItemCollected += GoToWinScene;
     }
 
     //private void OnDisable()      // I'm not sure if needed
@@ -98,8 +107,31 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GoToLooseScene()
     {
-        yield return new WaitForSeconds(delayAfterDeath);
+        yield return new WaitForSeconds(_delayAfterDeath);
         Time.timeScale = 1f;
         SceneManager.LoadScene("Loose");
+    }
+
+    public void GoToWinScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Win");
+    }
+
+    private void HandleAllTrapsDefeated()
+    {
+        if (_trapsDefeated >= _totalTrapsSpawned)
+        {
+            _areAllTrapsDefeated = true;
+            OnAllTrapsDefeated?.Invoke();
+        }
+    }
+
+    [ContextMenu("Trigger All Traps Defeated (Debug)")]
+    private void DebugTriggerAllTrapsDefeated()
+    {
+        _areAllTrapsDefeated = true;
+        Debug.Log("Debug: All traps defeated triggered manually!");
+        OnAllTrapsDefeated?.Invoke();
     }
 }
