@@ -24,6 +24,13 @@ public class UIManager : MonoBehaviour
         CameraFollow.OnHoverAfterTrapsDefeated += ShowTrapsDefeatedHoverText;
         CameraFollow.OnHoverEnded += HideHoverText;
     }
+    
+    private void OnDisable()
+    {
+        CameraFollow.OnHoverStarted -= ShowHoverText;
+        CameraFollow.OnHoverAfterTrapsDefeated -= ShowTrapsDefeatedHoverText;
+        CameraFollow.OnHoverEnded -= HideHoverText;
+    }
 
     private void ShowTrapsDefeatedHoverText()
     {

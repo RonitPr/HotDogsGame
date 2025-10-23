@@ -33,10 +33,13 @@ public class TrapController : MonoBehaviour
             GameManager.Instance?.RegisterTrap(trap);
         }
     }
-    //private void OnDisable()  // It causes null errors
-    //{
-    //    trap.OnDefeated -= HandleDefeated;
-    //}
+
+    private void OnDestroy()  // It causes null errors + added null check and OnDestroy needed simce enabled on Awake.
+    {
+        if (trap == null)
+        { return; }
+        trap.OnDefeated -= HandleDefeated;
+    }
 
     private void HandleDefeated()
     {
