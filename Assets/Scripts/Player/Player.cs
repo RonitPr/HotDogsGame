@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 
 public abstract class Player : DamageTaker
@@ -38,10 +36,10 @@ public abstract class Player : DamageTaker
         HandleAttack();
         Animate();
         //todo- fix the flip
-        //if (_inputDirection.x < 0 && !_facingLeft || _inputDirection.x > 0 && _facingLeft)
-        //{
-        //    Flip();
-        //}
+        if (_inputDirection.x < 0 && !_facingLeft || _inputDirection.x > 0 && _facingLeft)
+        {
+            Flip();
+        }
         _ability.UpdateAttackTransformPosition(_facingDirection);
     }
 
@@ -80,9 +78,7 @@ public abstract class Player : DamageTaker
 
     void Flip()
     {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1; // flips the sprite horizontally
-        transform.localScale = scale;
+        GetComponent<SpriteRenderer>().flipX = _facingLeft;
         _facingLeft = !_facingLeft;
     }
 
