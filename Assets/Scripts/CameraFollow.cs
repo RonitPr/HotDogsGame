@@ -56,10 +56,10 @@ public class CameraFollow : MonoBehaviour
 
         if (isHoveringAfterTrapsDefeated == true)
         {
-            Debug.Log("Entered if loop isHoveringAfterTrapsDefeated");
-            yield return new WaitForSeconds(_hoverHoldTimeAfterTrapsDefeated);
+            Debug.Log("Entered Camera if loop isHoveringAfterTrapsDefeated");
+            //yield return new WaitForSeconds(2f);
             OnHoverAfterTrapsDefeated?.Invoke();
-            yield return new WaitForSeconds(_hoverHoldTime);
+            yield return new WaitForSeconds(_hoverHoldTimeAfterTrapsDefeated);
         }
         else
         {

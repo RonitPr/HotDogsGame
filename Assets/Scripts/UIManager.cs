@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateTrapCounter(int defeated, int total)
     {
+        Debug.Log("Updating Traps Counter UI");
         if (trapCounterText != null)
             trapCounterText.text = $"Traps Defeated: {defeated}/{total}";
     }
