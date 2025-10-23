@@ -98,10 +98,11 @@ public class GameManager : MonoBehaviour
         WinItem.OnWinItemCollected += GoToWinScene;
     }
 
-    //private void OnDisable()      // I'm not sure if needed
-    //{
-    //    Player.OnPlayerDeath -= HandlePlayerDeath;
-    //}
+    private void OnDisable()      // I'm not sure if needed -> added
+    {
+        Player.OnPlayerDeath -= HandlePlayerDeath;
+        WinItem.OnWinItemCollected -= GoToWinScene;
+    }
 
     private void HandlePlayerDeath()
     {

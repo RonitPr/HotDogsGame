@@ -10,8 +10,13 @@ public class HandleWinItemBarricade : MonoBehaviour
     private void OnEnable()
     {
         CameraFollow.OnHoverAfterTrapsDefeated += DestroyBarricade;
-        Debug.Log("Trigger event OnHoverAfterTrapsDefeated -> destroy barricade");
     }
+
+    private void OnDisable()
+    {
+        CameraFollow.OnHoverAfterTrapsDefeated -= DestroyBarricade;
+    }
+
     private void DestroyBarricade()
     {
         StartCoroutine(WaitAndPrint());
