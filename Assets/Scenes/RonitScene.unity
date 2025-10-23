@@ -357,6 +357,12 @@ MonoBehaviour:
   maxX: 0
   minY: 0
   maxY: 0
+  _winPickup: {fileID: 0}
+  _hoverSpeed: 5
+  _hoverHoldTime: 2
+  _hoverHoldTimeAfterTrapsDefeated: 8
+  _returnSpeed: 2
+  isHoveringAfterTrapsDefeated: 0
 --- !u!1 &826914526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1043,7 @@ MonoBehaviour:
   - {fileID: 886649152}
   cameraFollow: {fileID: 712580460}
   CurrentPlayer: {fileID: 0}
+  _delayAfterDeath: 2
 --- !u!4 &2037415244
 Transform:
   m_ObjectHideFlags: 0

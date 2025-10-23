@@ -65,6 +65,8 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
                 {
                     _isStunned= false;
                     _isPoisoned= false;
+                    _anim.SetBool("IsStunned", false);
+                    _anim.SetBool("IsPoisoned", false);
                 }
             }
             else
@@ -192,7 +194,8 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     public void BecomeStunned()
     {
         if (_isStunned) return;
-        
+
+        _anim.SetBool("IsStunned", true);
         _isStunned = true;
         _timeLeftForAffect = _affectTime;
 
@@ -207,6 +210,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     {
         if (_isPoisoned) return;
 
+        _anim.SetBool("IsPoisoned", true);
         _isPoisoned = true;
         _timeLeftForAffect = _affectTime;
 
@@ -235,6 +239,7 @@ public abstract class FightingTrap : DamageTaker, IGenericTrap
     public override void TakeDamage(int damagePower)
     {
         base.TakeDamage(damagePower);
+        _anim.SetTrigger("TakeDamage");
         OnEnemyDamaged?.Invoke();
     }
 
