@@ -10,6 +10,7 @@ public abstract class Player : DamageTaker
     [SerializeField] protected AttackCast _ability;
     [SerializeField] private Vector2 _facingDirection = Vector2.right;
     [SerializeField] private CameraFollow _cameraFollow;
+    [SerializeField] private PlayerTransSprite _transSprite;
 
     public float moveSpeed = 5f;
     public Rigidbody2D body;
@@ -35,12 +36,16 @@ public abstract class Player : DamageTaker
         HandleMovement();
         HandleAttack();
         Animate();
-        //todo- fix the flip
         if (_inputDirection.x < 0 && !_facingLeft || _inputDirection.x > 0 && _facingLeft)
         {
             Flip();
         }
         _ability.UpdateAttackTransformPosition(_facingDirection);
+    }
+
+    public Vector3 GetInputDirection()
+    {
+        return _inputDirection;
     }
 
     private void FixedUpdate()
