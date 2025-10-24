@@ -14,8 +14,12 @@ public class PlayerTransSprite : MonoBehaviour
 
     private void Update()
     {
-        SR.sprite = player.GetComponent<SpriteRenderer>().sprite;
+        if(player == null)
+        {
+            return;
+        }
 
+        SR.sprite = player.GetComponent<SpriteRenderer>().sprite;
         Vector3 inputDirection = player.GetInputDirection();
         if (inputDirection.x < 0 && !_facingLeft || inputDirection.x > 0 && _facingLeft)
         {

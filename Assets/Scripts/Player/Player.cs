@@ -10,7 +10,6 @@ public abstract class Player : DamageTaker
     [SerializeField] protected AttackCast _ability;
     [SerializeField] private Vector2 _facingDirection = Vector2.right;
     [SerializeField] private CameraFollow _cameraFollow;
-    [SerializeField] private PlayerTransSprite _transSprite;
 
     public float moveSpeed = 5f;
     public Rigidbody2D body;

@@ -590,6 +590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficerTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 4708373193557729702, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6707428745384629389, guid: 03d5baf9c5fc060429b59513da80275e, type: 3}
       propertyPath: m_Size.x
       value: 4
@@ -634,6 +638,10 @@ PrefabInstance:
     - target: {fileID: 4429145913292288922, guid: 3fcb835ed3ef97b479e74bbf6aef145b, type: 3}
       propertyPath: m_Name
       value: RaccoonTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429145913292288922, guid: 3fcb835ed3ef97b479e74bbf6aef145b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6249830898595499254, guid: 3fcb835ed3ef97b479e74bbf6aef145b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1161,6 +1169,10 @@ PrefabInstance:
     - target: {fileID: 2607504267391565488, guid: 82813a967be26f740bc0b51b897cf0e1, type: 3}
       propertyPath: m_Name
       value: BullTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607504267391565488, guid: 82813a967be26f740bc0b51b897cf0e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4938800442770025523, guid: 82813a967be26f740bc0b51b897cf0e1, type: 3}
       propertyPath: m_LocalPosition.x
