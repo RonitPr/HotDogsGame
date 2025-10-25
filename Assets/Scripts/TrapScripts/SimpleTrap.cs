@@ -18,7 +18,7 @@ public abstract class SimpleTrap : MonoBehaviour, IGenericTrap
     {
         if (IsEffective(ability)){
             OnDefeated?.Invoke();
-            Debug.Log("Correct ability used! Disarming trap!");
+            Debug.Log($"Trap Defeat called for {this} (hash {GetHashCode()})");
             DestroyTrap();
         }
     }
