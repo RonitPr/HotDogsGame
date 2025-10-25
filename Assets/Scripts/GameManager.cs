@@ -6,7 +6,8 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public static event Action OnAllTrapsDefeated;
-    
+    public static event Action OnPlayerSwitch;
+
     public static GameManager Instance;
     public Player[] playerTypes;
     public CameraFollow cameraFollow;
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
     {
         _currentIndex = (_currentIndex + 1) % playerTypes.Length;
         SetActivePlayer(_currentIndex);
+        OnPlayerSwitch?.Invoke();
     }
 
     void SetActivePlayer(int index)
