@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum TrapDirection { Horizontal, Vertical }
@@ -19,6 +20,19 @@ public class TrapController : MonoBehaviour
     private IGenericTrap trap;
     private Vector3 spriteInitialLocalPosition;
 
+    private static int _defeatedCounter;
+    public static int DefeatedCounter => _defeatedCounter;
+
+    private void OnEnable()
+    {
+        GameManager.OnGameEnd += HandleTrapCounterReset;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameEnd -= HandleTrapCounterReset;
+    }
+
     private void Awake()
     {
         spriteInitialLocalPosition = blockingCollider.transform.localPosition;
@@ -30,11 +44,10 @@ public class TrapController : MonoBehaviour
         {
             trap = t;
             trap.OnDefeated += HandleDefeated;
-            GameManager.Instance?.RegisterTrap(trap);
         }
     }
 
-    private void OnDestroy()  // It causes null errors + added null check and OnDestroy needed simce enabled on Awake.
+    private void OnDestroy()
     {
         if (trap == null)
         { return; }
@@ -43,11 +56,18 @@ public class TrapController : MonoBehaviour
 
     private void HandleDefeated()
     {
-        Debug.Log("Should handle defeated!");
         if (blockingCollider != null)
             blockingCollider.enabled = false;
 
         Destroy(gameObject, 0.5f);
+        _defeatedCounter++;
+        UIManager.Instance.UpdateTrapCounter(_defeatedCounter, TrapSpawner.SpawnCounter);
+        GameManager.HandleAllTrapsDefeated();
+    }
+
+    private void HandleTrapCounterReset()
+    {
+        _defeatedCounter = 0;
     }
 
     public void SetDirection(TrapDirection dir, SpriteDirection sdir)
