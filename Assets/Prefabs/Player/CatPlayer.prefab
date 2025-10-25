@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7928629845994636789, guid: 18b03192a31c41c419cfc9da628a2c6e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.21176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -472,7 +472,6 @@ MonoBehaviour:
     damageAmount: 1
   _facingDirection: {x: 1, y: 0}
   _cameraFollow: {fileID: 0}
-  _transSprite: {fileID: 1164204163902478982}
   moveSpeed: 5
   body: {fileID: 27147218976841650}
   Anim: {fileID: 6243781156616065666}
