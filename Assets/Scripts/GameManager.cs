@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static event Action OnAllTrapsDefeated;
+
+    public static event Action OnPlayerSwitch;
+
+    public static GameManager Instance;
+
     public static event Action OnGameEnd;
     
     public Player[] playerTypes;
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         _currentIndex = (_currentIndex + 1) % playerTypes.Length;
         SetActivePlayer(_currentIndex);
+        OnPlayerSwitch?.Invoke();
     }
 
     void SetActivePlayer(int index)
