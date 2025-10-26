@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
 
     private void ShowHoverText()
     {
-        hoverText.text = "Your goal lies ahead...";
+        hoverText.text = "Beat all the enemies to unlock the golden bone!";
         hoverText.gameObject.SetActive(true);
     }
 

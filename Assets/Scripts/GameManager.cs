@@ -85,14 +85,14 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(_delayAfterDeath);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Loose");
+        SceneManager.LoadScene("Lost");
         OnGameEnd?.Invoke();
     }
 
     public void GoToWinScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("Won");
         OnGameEnd?.Invoke();
     }
 

@@ -115,6 +115,7 @@ public abstract class Player : DamageTaker
     {
         GlobalHealth.CurrentHitPoints = Mathf.Max(GlobalHealth.CurrentHitPoints - damagePower, 0);
         OnPlayerDamaged?.Invoke();
+        Anim.SetTrigger("TookDamage");
         if (GlobalHealth.CurrentHitPoints == 0)
         {
             DestroyDead();

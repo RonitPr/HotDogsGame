@@ -370,7 +370,6 @@ MonoBehaviour:
     damageAmount: 1
   _facingDirection: {x: 1, y: 0}
   _cameraFollow: {fileID: 0}
-  _transSprite: {fileID: 4628440322989892614}
   moveSpeed: 5
   body: {fileID: 6968577696595035479}
   Anim: {fileID: -3317303186834994854}
@@ -502,7 +501,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1131563973958719411, guid: e052a604425a1eb4fa400e1a3c430bda, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.21176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
