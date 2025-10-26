@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public abstract class Player : DamageTaker
@@ -15,6 +17,7 @@ public abstract class Player : DamageTaker
     public Rigidbody2D body;
 
     protected Vector3 _inputDirection;
+    private bool _attackAvailale = true;
 
     //animation
     public Animator Anim;
@@ -25,6 +28,11 @@ public abstract class Player : DamageTaker
     private void Awake()
     {
         GlobalHealth.CurrentHitPoints = MaxHitPoints;
+    }
+
+    private void OnEnable()
+    {
+        _attackAvailale = true;
     }
 
     void Update()
@@ -88,11 +96,19 @@ public abstract class Player : DamageTaker
 
     protected void HandleAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _attackAvailale)
         {
+            _attackAvailale = false;
             PerformAbility(_ability.Cast(_facingDirection));
             Anim.SetTrigger("ActiveAttack");
+            StartCoroutine(AttckCooldown());
         }
+    }
+
+    private IEnumerator AttckCooldown()
+    {
+        yield return new WaitForSeconds(0.5f); //Wait for attack to end
+        _attackAvailale = true;
     }
 
     protected virtual void PerformAbility(RaycastHit2D[] hits)
