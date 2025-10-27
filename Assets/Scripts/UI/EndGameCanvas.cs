@@ -20,10 +20,17 @@ public class EndGameCanvas : MonoBehaviour
     }
     IEnumerator ShowCanvasElements()
     {
+        if(text != null) {
+            text.SetActive(false);
+        }
         backButton.SetActive(false);
-        text.SetActive(false);
+
         yield return new WaitForSeconds(timeToWaitforButton);
+
         backButton.SetActive(true);
-        text.SetActive(true);
+        if (text != null)
+        {
+            text.SetActive(true);
+        }
     }
 }
