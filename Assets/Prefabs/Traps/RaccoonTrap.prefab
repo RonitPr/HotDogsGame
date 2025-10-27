@@ -414,7 +414,8 @@ MonoBehaviour:
   _chaseMaxDistance: 8
   _affectTime: 2
   _speed: 2
-  _attackTimeInterval: 1.14
+  _attackTimeInterval: 1
+
   _attack:
     attackTransform: {fileID: 2650777114175899971}
     attackRange: 1
