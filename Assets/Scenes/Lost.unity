@@ -567,6 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introScene: Intro
   backButton: {fileID: 1388800404}
+  text: {fileID: 0}
   timeToWaitforButton: 3
 --- !u!114 &1305145063
 MonoBehaviour:
