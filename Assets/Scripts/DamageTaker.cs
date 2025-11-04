@@ -5,7 +5,6 @@ public class DamageTaker : MonoBehaviour
 {
     [SerializeField] private int _maxHitPoints;
     [SerializeField] private int _currentHitPoints;
-    [SerializeField] int _power;
     
     public event Action OnDefeated;
 
@@ -20,12 +19,7 @@ public class DamageTaker : MonoBehaviour
         get => _currentHitPoints;
         protected set => _currentHitPoints = value;
     }
-    
-    public int Power
-    {
-        get => _power;
-        protected set => _power = value;
-    }
+
     private void Start()
     {
         _currentHitPoints = _maxHitPoints;

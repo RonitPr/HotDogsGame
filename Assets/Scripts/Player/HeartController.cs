@@ -5,11 +5,6 @@ public class HeartController : MonoBehaviour
     public Sprite FullHeart, HalfHeart, EmptyHeart;
     Image HeartImage;
 
-    private void Awake()
-    {
-        HeartImage = GetComponent<Image>();
-    }
-
     public void SetHeartImage(HeartStatus status)
     {
         switch (status)
@@ -24,6 +19,11 @@ public class HeartController : MonoBehaviour
                 HeartImage.sprite = FullHeart;
                 break;
         }
+    }
+
+    private void Awake()
+    {
+        HeartImage = GetComponent<Image>();
     }
 }
 

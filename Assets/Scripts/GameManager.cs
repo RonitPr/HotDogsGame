@@ -64,6 +64,22 @@ public class GameManager : MonoBehaviour
 
     public Player GetCurrentPlayer() => CurrentPlayer;
 
+    public void GoToWinScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Won");
+        OnGameEnd?.Invoke();
+    }
+
+    public static void HandleAllTrapsDefeated()
+    {
+        if (TrapController.DefeatedCounter >= TrapSpawner.SpawnCounter)
+        {
+            _areAllTrapsDefeated = true;
+            OnAllTrapsDefeated?.Invoke();
+        }
+    }
+
     private void OnEnable()
     {
         Player.OnPlayerDeath += HandlePlayerDeath;
@@ -87,22 +103,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Lost");
         OnGameEnd?.Invoke();
-    }
-
-    public void GoToWinScene()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Won");
-        OnGameEnd?.Invoke();
-    }
-
-    public static void HandleAllTrapsDefeated()
-    {
-        if (TrapController.DefeatedCounter >= TrapSpawner.SpawnCounter)
-        {
-            _areAllTrapsDefeated = true;
-            OnAllTrapsDefeated?.Invoke();
-        }
     }
 
     [ContextMenu("Trigger All Traps Defeated (Debug)")]

@@ -9,11 +9,11 @@ public class AttackCast
     [SerializeField] internal LayerMask attackableLayer;
     [SerializeField] internal int damageAmount = 1;
 
-    private RaycastHit2D[] hits;
+    private RaycastHit2D[] _hits;
 
     public RaycastHit2D[] Cast(Vector2 facingDir)
     {
-        hits = Physics2D.CircleCastAll(
+        _hits = Physics2D.CircleCastAll(
             attackTransform.position,
             attackRange,
             facingDir,
@@ -21,7 +21,7 @@ public class AttackCast
             attackableLayer
         );
 
-        return hits;
+        return _hits;
     }
     public void UpdateAttackTransformPosition(Vector2 facingDirection)
     {

@@ -4,8 +4,8 @@ using System.Collections;
 
 public class HandleWinItemBarricade : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private float animationEndDelay = 3f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private float _animationEndDelay = 3f;
 
     private void OnEnable()
     {
@@ -23,8 +23,8 @@ public class HandleWinItemBarricade : MonoBehaviour
     }
     IEnumerator WaitAndPrint()
     {
-        animator.SetBool("IsDestroyed", true);
-        yield return new WaitForSeconds(animationEndDelay);
+        _animator.SetBool("IsDestroyed", true);
+        yield return new WaitForSeconds(_animationEndDelay);
         OnBreakAnimationEnd();
     }
 

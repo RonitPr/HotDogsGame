@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 _speed;
     private bool _isHovering = false;
-    public bool isHoveringAfterTrapsDefeated = false;
+    private bool _isHoveringAfterTrapsDefeated = false;
 
     private void Start()
     {
@@ -54,7 +54,7 @@ public class CameraFollow : MonoBehaviour
 
         yield return StartCoroutine(MoveCamera(startPos, targetPos, _hoverSpeed));
 
-        if (isHoveringAfterTrapsDefeated == true)
+        if (_isHoveringAfterTrapsDefeated == true)
         {
             Debug.Log("Entered Camera if loop isHoveringAfterTrapsDefeated");
             //yield return new WaitForSeconds(2f);
@@ -96,7 +96,7 @@ public class CameraFollow : MonoBehaviour
 
     private void HoverOnAllTrapsDefeated()
     {
-        isHoveringAfterTrapsDefeated = true;
+        _isHoveringAfterTrapsDefeated = true;
         if (_winPickup != null)
             StartCoroutine(HoverOverWinItem());
     }

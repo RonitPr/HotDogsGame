@@ -8,16 +8,21 @@ public abstract class PickupBase : MonoBehaviour
 
     protected bool isPickedUp = false;
 
-    private void Awake()
-    {
-        if (animator == null)
-            animator = GetComponent<Animator>();
-    }
-
     IEnumerator WaitAndPrint()
     {
         yield return new WaitForSeconds(animationEndDelay);
         OnPickupAnimationEnd();
+    }
+
+    public void OnPickupAnimationEnd()
+    {
+        HandlePickupEffect();   // subclass handles specific behavior
+        gameObject.SetActive(false);
+    }
+    private void Awake()
+    {
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,12 +36,6 @@ public abstract class PickupBase : MonoBehaviour
             StartCoroutine(WaitAndPrint());
             
         }
-    }
-
-    public void OnPickupAnimationEnd()
-    {
-        HandlePickupEffect();   // subclass handles specific behavior
-        gameObject.SetActive(false);
     }
 
     // Each pickup will override this

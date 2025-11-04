@@ -11,6 +11,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI trapCounterText;
     [SerializeField] private TextMeshProUGUI hoverText;
 
+    public void UpdateTrapCounter(int defeated, int total)
+    {
+        //Debug.Log("Updating Traps Counter UI");
+        if (trapCounterText != null)
+            trapCounterText.text = $"Traps Defeated: {defeated}/{total}";
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -47,12 +54,5 @@ public class UIManager : MonoBehaviour
     private void HideHoverText()
     {
         hoverText.gameObject.SetActive(false);
-    }
-
-    public void UpdateTrapCounter(int defeated, int total)
-    {
-        Debug.Log("Updating Traps Counter UI");
-        if (trapCounterText != null)
-            trapCounterText.text = $"Traps Defeated: {defeated}/{total}";
     }
 }
